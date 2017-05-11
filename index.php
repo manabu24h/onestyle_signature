@@ -4,7 +4,7 @@
 <title>お問い合わせ内容</title>
 </head>
 <?php
-  echo "git テストの続き";
+  echo "git テストの続きの続き";
 ?>
 </body>
 </html>
