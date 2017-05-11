@@ -1,2 +1,0 @@
-# DS_Store 除外
-*.DS_Store
