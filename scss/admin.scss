@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+/* Description: ログイン画面 */
+
+// ===================================================================
+// 各SCSSファイルのインポート 
+// ===================================================================
+
+// セッティング
+@import "setting";
+
+.login { font-family: 'Noto Sans Japanese', sans-serif;
+	padding: 8% 0% 2% !important;
+	background: url(#{$img_path}bg/bg_dummy_02.jpg) no-repeat center center;
+	background-size: cover;
+	#login { //ログイン画面全体を囲んでます
+		width: 100%;
+		max-width: 340px;
+		padding: $bs*8 $bs*5 $bs !important;
+		box-sizing: border-box;
+		background: rgba($ac_color,0.8);
+	    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.13);
+	    box-shadow: 0 1px 3px rgba(0,0,0,.13);
+		h1 { //wordpressのロゴが出ているところ
+			margin-bottom: $bs*2;
+			a { width: 240px; height: 48px; background: url(#{$img_path}bg/bg_login_logo@2x.png) no-repeat 0 0; background-size: contain !important; margin: 0 auto;}
+		}
+		#loginform { //ログインフォームの白い背景
+		    margin-top: 0 !important;
+		    margin-left: 0;
+		    padding: $bs 0 $bs*3;
+		    background: transparent !important;
+		    -webkit-box-shadow: none !important;
+		    box-shadow: none !important;
+			// background: rgba($ac_color,0.8);
+			p.submit {
+				.button-primary {
+				    background: $font_color;
+				    border-color: $font_color;
+				    -webkit-box-shadow: 0 1px 0 #006799;
+				    box-shadow: 0 1px 0 #006799;
+				    color: #fff;
+				    text-decoration: none;
+				    text-shadow: 0 -1px 1px #006799,1px 0 1px #006799,0 1px 1px #006799,-1px 0 1px #006799;
+				}
+			}
+		}
+		#backtoblog { text-align: center; padding: 0 !important; width: 100%;
+			&::before { display: block; content: ""; width: 120px; height: 24px; margin: 0 auto $bs; background:url(#{$img_path}bg/bg_login_cr-logo@2x.png); background-size:contain; }
+			&::after { font-size: fz(11); content: "© ONESTYLE. All Rights Reserved."; letter-spacing: .12em; }
+		}
+	}
+	input#user_login,
+	input#user_pass { font-size: 16px !important; padding: $bs $bs*2 !important; }
+	input:placeholder-shown { font-size: 13px; }
+	p.forgetmenot {
+		label { color: $font_color !important; }
+	}
+	/* Google Chrome, Safari, Opera 15+, Android, iOS */
+	input::-webkit-input-placeholder { font-size: 13px; }
+	/*for Firefox*/
+	input:-moz-placeholder { font-size: 13px; }
+	/* Firefox 19+ */
+	input::-moz-placeholder { font-size: 13px; }
+	/* IE 10+ */
+	input:-ms-input-placeholder { font-size: 13px; }
+}

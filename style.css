@@ -1,0 +1,240 @@
+@charset "UTF-8";
+/*
+Theme Name: ONESTYLE Original
+Description:  ONESTYLE撮影のお申込み案内
+Author: NISHIO KIKAKU
+*/
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600|Poppins:300");
+@import url("http://fonts.googleapis.com/earlyaccess/notosansjapanese.css");
+/* Reset Style */
+html {
+  overflow-y: scroll;
+  width: 100%;
+  height: 100%; }
+
+body {
+  width: 100%;
+  height: 100%;
+  line-height: 1;
+  -webkit-text-size-adjust: 100%; }
+
+/* html5doctor.com Reset Stylesheet v1.6.1
+Last Updated: 2010-09-17 Author: Richard Clark - http://richclarkdesign.com Twitter: @rich_clark */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: top;
+  background: transparent;
+  font-weight: 300; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+dl, dt, dd, ol, ul, li {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none; }
+
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+/* YUI 3.4.1 (build 4118) Copyright 2011 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License. http://yuilibrary.com/license/ */
+body {
+  font: 13px/1.231 arial,helvetica,clean,sans-serif;
+  *font-size: small;
+  *font: x-small; }
+
+select, input, button, textarea {
+  font: 99% arial,helvetica,clean,sans-serif; }
+
+table {
+  font-size: inherit;
+  font: 100%; }
+
+pre, code, kbd, samp, tt {
+  font-family: monospace;
+  *font-size: 108%;
+  line-height: 100%; }
+
+.clearfix {
+  *zoom: 1; }
+  .clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden; }
+
+html {
+  height: 100%;
+  color: #363636; }
+
+body {
+  width: 100%;
+  height: 100%;
+  letter-spacing: .05em;
+  line-height: 1.4;
+  background: #fff;
+  font-family: 'Noto Sans Japanese', sans-serif; }
+
+#container {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 40px 24px; }
+  #container a {
+    color: #5e5e5e;
+    -webkit-transition: all 0.15s linear;
+    -moz-transition: all 0.15s linear;
+    -ms-transition: all 0.15s linear;
+    -o-transition: all 0.15s linear;
+    transition: all 0.15s linear; }
+    #container a:hover {
+      color: rgba(54, 54, 54, 0.7); }
+
+#breadcrumb ul {
+  letter-spacing: -0.4em; }
+  #breadcrumb ul li {
+    display: inline-block;
+    letter-spacing: .05em;
+    margin-right: 8px; }
+    #breadcrumb ul li a {
+      font-size: 85%;
+      vertical-align: middle;
+      font-weight: 500; }
+    #breadcrumb ul li .arrow {
+      font-size: 77%;
+      padding-left: 4px;
+      vertical-align: middle; }
+
+#contents {
+  width: 100%;
+  max-width: 960px;
+  box-sizing: border-box;
+  padding: 40px 0;
+  margin: 0 auto; }
+  #contents .intro {
+    text-align: center;
+    margin-bottom: 40px; }
+    #contents .intro h1 {
+      font-size: 139%;
+      font-weight: 500;
+      margin-bottom: 24px; }
+    #contents .intro .b-txt {
+      line-height: 1.8; }
+    #contents .intro .step-nav {
+      padding-top: 24px; }
+      #contents .intro .step-nav a, #contents .intro .step-nav span {
+        color: #363636;
+        display: inline-block;
+        position: relative;
+        font-size: 108%;
+        background: #fff;
+        border: 1px solid #363636;
+        padding: 8px 12px;
+        margin-right: 40px;
+        margin-bottom: 24px; }
+        #contents .intro .step-nav a::after, #contents .intro .step-nav span::after {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          width: 0;
+          height: 0;
+          margin-top: -5px;
+          border: 5px solid transparent;
+          left: auto;
+          top: 50%;
+          right: -36px;
+          margin-top: 0;
+          border: 8px solid transparent;
+          border-left: 12px solid #363636;
+          transform: translateY(-50%); }
+        #contents .intro .step-nav a.flow-current, #contents .intro .step-nav span.flow-current {
+          background: #363636;
+          color: #fff; }
+        #contents .intro .step-nav a.flow-last::after, #contents .intro .step-nav span.flow-last::after {
+          display: none; }
+      #contents .intro .step-nav a:hover {
+        color: #fff;
+        background: #5e5e5e; }
+
+/*
+	
+// レイアウト
+@import "drawer";
+
+// ページ
+@import "page";
+
+// シングル
+@import "single";
+
+// 共通 w:768px 以下
+@import "mobile/base";
+
+// スマートフォン w:640px 以下
+@import "mobile/phone";
+*/
+
+/*# sourceMappingURL=style.css.map */

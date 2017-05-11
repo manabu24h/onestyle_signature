@@ -1,0 +1,36 @@
+@charset "utf-8";
+// ===================================================================
+// mixinやらCSS3やら、extendも。
+// ===================================================================
+// @ MIXIN
+
+// border-radius
+@mixin border_radius($br_value) {
+	@each $prefix in $set_prefix {
+		#{$prefix}border-radius: $br_value;
+	}
+	// behavior: url(./js/pie/PIE.htc); //for IE
+	overflow: hidden;
+}
+
+@mixin box_shadow($sh_value) {
+	@each $prefix in $set_prefix {
+		#{$prefix}box-shadow: $sh_value;
+	}
+}
+
+@mixin bg_size($bg_size_value) {
+	background-size: $bg_size_value;
+	@each $prefix in $set_prefix {
+		#{$prefix}background-size: $bg_size_value;
+	}
+}
+
+// fade
+@mixin img_fade($fade_value) {
+	@each $prefix in $set_prefix {
+		#{$prefix}transition: $fade_value ease-in-out;
+	}
+}
+
+@mixin t-arrow { content: ""; display: block; position: absolute; top: 50%; left: 0; width: 0; height: 0; margin-top: -5px; border: 5px solid transparent; }
