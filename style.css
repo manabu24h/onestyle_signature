@@ -172,15 +172,32 @@ body {
   box-sizing: border-box;
   padding: 40px 0;
   margin: 0 auto; }
+  #contents p {
+    line-height: 1.8; }
+  #contents .bt-type1 {
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    font-size: 108%;
+    border: 1px solid #363636;
+    padding: 8px 12px;
+    margin-bottom: 24px;
+    background: #363636;
+    color: #fff; }
+    #contents .bt-type1 .mini {
+      font-size: 85%; }
+    #contents .bt-type1:hover {
+      color: #fff;
+      background: #5e5e5e; }
+  #contents .cl-f00 {
+    color: #ff0000; }
   #contents .intro {
     text-align: center;
     margin-bottom: 40px; }
-    #contents .intro h1 {
-      font-size: 139%;
+    #contents .intro h2 {
+      font-size: 154%;
       font-weight: 500;
       margin-bottom: 24px; }
-    #contents .intro .b-txt {
-      line-height: 1.8; }
     #contents .intro .step-nav {
       padding-top: 24px; }
       #contents .intro .step-nav a, #contents .intro .step-nav span {
@@ -218,6 +235,378 @@ body {
       #contents .intro .step-nav a:hover {
         color: #fff;
         background: #5e5e5e; }
+  #contents .guide {
+    width: 100%;
+    max-width: 780px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #363636;
+    margin: 0 auto 96px; }
+    #contents .guide h2 {
+      font-size: 154%;
+      font-weight: 500;
+      margin-bottom: 24px; }
+    #contents .guide .b-txt {
+      margin-bottom: 24px; }
+    #contents .guide .g-pt {
+      margin-bottom: 40px; }
+      #contents .guide .g-pt .label {
+        font-weight: 500;
+        margin-bottom: 16px; }
+        #contents .guide .g-pt .label::before {
+          content: "■"; }
+      #contents .guide .g-pt p {
+        margin-bottom: 24px; }
+      #contents .guide .g-pt .addr {
+        font-size: 139%;
+        font-weight: 500; }
+      #contents .guide .g-pt .tel {
+        font-size: 124%;
+        font-weight: 500;
+        vertical-align: baseline; }
+      #contents .guide .g-pt a.bt-type1.bt-mform {
+        padding: 12px; }
+  #contents #mail-form {
+    text-align: center; }
+    #contents #mail-form h2 {
+      font-size: 154%;
+      font-weight: 500;
+      margin-bottom: 24px; }
+    #contents #mail-form .b-txt {
+      margin-bottom: 40px; }
+    #contents #mail-form .consent {
+      text-align: left;
+      width: 100%;
+      max-width: 780px;
+      margin: 0 auto 40px; }
+      #contents #mail-form .consent h3 {
+        font-size: 124%;
+        font-weight: 500;
+        margin-bottom: 24px; }
+      #contents #mail-form .consent .cons-sec {
+        margin-bottom: 40px; }
+      #contents #mail-form .consent .item {
+        margin-bottom: 24px; }
+        #contents #mail-form .consent .item h4 {
+          font-weight: 500;
+          margin-bottom: 8px; }
+          #contents #mail-form .consent .item h4::before {
+            content: "■"; }
+        #contents #mail-form .consent .item ol {
+          padding-left: 16px; }
+          #contents #mail-form .consent .item ol li {
+            list-style: disc;
+            line-height: 1.8; }
+        #contents #mail-form .consent .item .cxl-fee {
+          padding: 16px 0 0 16px; }
+          #contents #mail-form .consent .item .cxl-fee span.fee {
+            font-size: 124%;
+            padding-left: 24px;
+            font-weight: 500;
+            vertical-align: baseline; }
+    #contents #mail-form form {
+      text-align: left;
+      width: 100%;
+      max-width: 780px;
+      margin: 0 auto 40px; }
+      #contents #mail-form form#apply {
+        padding-top: 40px;
+        border-top: 1px solid #efebe9; }
+      #contents #mail-form form .unit {
+        line-height: 1.8;
+        padding: 12px 0;
+        width: 95%;
+        margin: 0 auto 8px; }
+        #contents #mail-form form .unit p.label {
+          font-weight: 600; }
+      #contents #mail-form form dl dt, #contents #mail-form form dl dd {
+        padding: 8px 2%;
+        display: inline-block;
+        border: none;
+        vertical-align: middle;
+        border-collapse: separate; }
+      #contents #mail-form form dl dt {
+        max-width: 120px;
+        width: 20%;
+        text-align: left; }
+        #contents #mail-form form dl dt span.item {
+          font-size: 108%;
+          padding-left: 16px;
+          vertical-align: middle;
+          position: relative;
+          font-weight: 600; }
+          #contents #mail-form form dl dt span.item.must:before {
+            position: absolute;
+            left: 0;
+            font-size: 93%;
+            content: "※";
+            color: #ed1c24; }
+      #contents #mail-form form dl dd {
+        width: 70%;
+        text-align: left; }
+        #contents #mail-form form dl dd input {
+          max-width: 250px;
+          width: 75%;
+          font-size: 108%;
+          padding: 8px 16px; }
+          #contents #mail-form form dl dd input#zip1 {
+            width: 40px; }
+          #contents #mail-form form dl dd input#zip2 {
+            width: 56px; }
+          #contents #mail-form form dl dd input#prefecture {
+            max-width: 120px; }
+        #contents #mail-form form dl dd textarea {
+          max-width: 320px;
+          width: 75%;
+          font-size: 108%;
+          padding: 8px 16px;
+          border: 1px solid #afafaf; }
+        #contents #mail-form form dl dd select {
+          background: #fff;
+          border: 1px solid #afafaf;
+          max-width: 250px;
+          height: 32px;
+          font-size: 108%;
+          padding: 8px 24px; }
+        #contents #mail-form form dl dd .wpcf7-list-item input[type=radio] {
+          display: inline-block;
+          width: 20px; }
+        #contents #mail-form form dl dd .wpcf7-list-item .wpcf7-list-item-label {
+          display: inline-block; }
+      #contents #mail-form form input[type=checkbox] {
+        display: none; }
+      #contents #mail-form form .check_css {
+        position: relative;
+        display: inline-block;
+        font-size: 124%;
+        font-weight: 600;
+        width: 100%;
+        padding-left: 40px;
+        box-sizing: border-box;
+        vertical-align: middle;
+        cursor: pointer;
+        -webkit-transition: background-color 0.2s linear;
+        -moz-transition: background-color 0.2s linear;
+        -ms-transition: background-color 0.2s linear;
+        -o-transition: background-color 0.2s linear;
+        transition: background-color 0.2s linear; }
+        #contents #mail-form form .check_css:hover::after {
+          border-color: #363636; }
+        #contents #mail-form form .check_css::after {
+          position: absolute;
+          top: 50%;
+          left: 15px;
+          display: block;
+          margin-top: -10px;
+          width: 16px;
+          height: 16px;
+          border: 2px solid #ccc;
+          content: '';
+          -webkit-border-radius: 6px;
+          -moz-border-radius: 6px;
+          -ms-border-radius: 6px;
+          -o-border-radius: 6px;
+          border-radius: 6px;
+          overflow: hidden;
+          -webkit-transition: border-color 0.2s linear;
+          -moz-transition: border-color 0.2s linear;
+          -ms-transition: border-color 0.2s linear;
+          -o-transition: border-color 0.2s linear;
+          transition: border-color 0.2s linear; }
+        #contents #mail-form form .check_css::before {
+          position: absolute;
+          top: 50%;
+          left: 21px;
+          display: block;
+          margin-top: -7px;
+          width: 5px;
+          height: 9px;
+          border-right: 3px solid #363636;
+          border-bottom: 3px solid #363636;
+          content: '';
+          opacity: 0;
+          -webkit-transition: opacity 0.2s linear;
+          -moz-transition: opacity 0.2s linear;
+          -ms-transition: opacity 0.2s linear;
+          -o-transition: opacity 0.2s linear;
+          transition: opacity 0.2s linear;
+          -webkit-transform: rotate(45deg);
+          -moz-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          -o-transform: rotate(45deg);
+          transform: rotate(45deg); }
+      #contents #mail-form form input[type=checkbox]:checked + .check_css:before {
+        opacity: 1; }
+      #contents #mail-form form .submit-area {
+        text-align: center;
+        padding-top: 40px; }
+        #contents #mail-form form .submit-area p.att {
+          text-align: left;
+          line-height: 1.7;
+          max-width: 640px;
+          margin: 0 auto 40px; }
+        #contents #mail-form form .submit-area .confirm, #contents #mail-form form .submit-area .back, #contents #mail-form form .submit-area .submit {
+          display: inline-block;
+          border: none; }
+          #contents #mail-form form .submit-area .confirm input, #contents #mail-form form .submit-area .back input, #contents #mail-form form .submit-area .submit input {
+            margin: 0;
+            padding: 0;
+            background: none;
+            border: none;
+            border-radius: 0;
+            outline: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -ms-appearance: none;
+            -o-appearance: none;
+            appearance: none; }
+        #contents #mail-form form .submit-area #submit[disabled] {
+          background: #efebe9 !important; }
+        #contents #mail-form form .submit-area .bt-submit {
+          width: 180px;
+          padding: 8px !important;
+          margin: 0 auto !important;
+          font-size: 108%;
+          color: #fff;
+          text-align: center;
+          letter-spacing: .2em;
+          background: #363636 !important;
+          cursor: pointer;
+          border: none;
+          -webkit-transition: all 0.3s linear;
+          -moz-transition: all 0.3s linear;
+          -ms-transition: all 0.3s linear;
+          -o-transition: all 0.3s linear;
+          transition: all 0.3s linear; }
+          #contents #mail-form form .submit-area .bt-submit:hover {
+            color: #fff;
+            text-decoration: none;
+            background: rgba(54, 54, 54, 0.8); }
+  #contents .plan {
+    text-align: center;
+    width: 100%;
+    max-width: 780px;
+    margin: 0 auto 64px; }
+    #contents .plan h2 {
+      font-size: 154%;
+      font-weight: 500;
+      margin-bottom: 24px; }
+    #contents .plan .b-txt {
+      margin-bottom: 24px; }
+    #contents .plan .p-nav {
+      margin-bottom: 64px; }
+      #contents .plan .p-nav a.bt-type1 {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 16px; }
+    #contents .plan .pl-unit {
+      text-align: center;
+      padding: 40px 0;
+      border-bottom: 1px solid #363636;
+      margin-bottom: 64px; }
+      #contents .plan .pl-unit h3 {
+        font-size: 124%;
+        font-weight: 500;
+        margin-bottom: 24px; }
+      #contents .plan .pl-unit .b-txt {
+        text-align: justify;
+        margin-bottom: 24px; }
+      #contents .plan .pl-unit ul {
+        letter-spacing: -0.4em;
+        text-align: center;
+        margin-bottom: 24px; }
+        #contents .plan .pl-unit ul .label {
+          font-size: 124%;
+          font-weight: 500; }
+        #contents .plan .pl-unit ul .item {
+          display: inline-block;
+          max-width: 336px;
+          letter-spacing: .05em;
+          padding: 24px; }
+          #contents .plan .pl-unit ul .item .thumb {
+            position: relative;
+            margin-bottom: 16px;
+            text-align: center; }
+            #contents .plan .pl-unit ul .item .thumb a:hover {
+              opacity: 0.9; }
+            #contents .plan .pl-unit ul .item .thumb img {
+              width: 100%;
+              height: auto; }
+            #contents .plan .pl-unit ul .item .thumb .bt-type1 {
+              position: absolute;
+              left: 50%;
+              bottom: 16px;
+              transform: translateX(-50%);
+              background: rgba(54, 54, 54, 0.75);
+              margin-bottom: 0; }
+          #contents .plan .pl-unit ul .item .detail {
+            text-align: justify; }
+        #contents .plan .pl-unit ul.clmn-1 .item {
+          display: inline-block;
+          width: 100%;
+          max-width: none; }
+          #contents .plan .pl-unit ul.clmn-1 .item .thumb {
+            float: left;
+            width: 35%;
+            max-width: 264px;
+            margin-right: 2%; }
+          #contents .plan .pl-unit ul.clmn-1 .item .detail {
+            float: left;
+            width: 62%;
+            text-align: justify; }
+      #contents .plan .pl-unit a.bt-type1 {
+        margin: 0 16px 16px; }
+
+footer {
+  width: 100%;
+  max-width: 960px;
+  box-sizing: border-box;
+  padding: 40px 0;
+  border-top: 1px solid #363636;
+  margin: 0 auto; }
+  footer .access-info {
+    text-align: center;
+    padding: 24px 0;
+    margin-bottom: 24px; }
+    footer .access-info .studio {
+      display: inline-block;
+      margin: 0 40px;
+      text-align: left; }
+      footer .access-info .studio h2 {
+        text-align: center;
+        margin-bottom: 8px; }
+        footer .access-info .studio h2 span {
+          vertical-align: middle; }
+          footer .access-info .studio h2 span.jpn {
+            font-size: 154%;
+            font-weight: 600;
+            letter-spacing: .15em;
+            margin-bottom: 8px; }
+          footer .access-info .studio h2 span.eng {
+            font-size: 108%;
+            font-family: 'Josefin Sans', sans-serif;
+            font-weight: 600;
+            letter-spacing: .15em; }
+      footer .access-info .studio p {
+        margin-bottom: 4px;
+        line-height: 1.5; }
+        footer .access-info .studio p.tel {
+          text-align: center; }
+          footer .access-info .studio p.tel .label {
+            font-size: 139%;
+            margin-right: 8px;
+            vertical-align: baseline;
+            font-weight: 600; }
+          footer .access-info .studio p.tel .tel-link {
+            font-size: 247%;
+            vertical-align: baseline;
+            font-weight: 600; }
+        footer .access-info .studio p.addr {
+          font-size: 93%;
+          margin-bottom: 16px; }
+        footer .access-info .studio p.biz-info {
+          font-size: 93%;
+          letter-spacing: .02em;
+          font-weight: 600; }
 
 /*
 	

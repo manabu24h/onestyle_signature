@@ -24,9 +24,16 @@ header { }
 }
 
 #contents { width: 100%; max-width: 960px; box-sizing: border-box; padding: $bs*5 0; margin: 0 auto;
+	// 共通 
+	p { line-height: 1.8; }
+	.bt-type1 { text-align: center; display: inline-block; position: relative; font-size: fz(14); border: 1px solid $font_color; padding: $bs $bs*1.5; margin-bottom: $bs*3; background: $font_color; color: #fff;
+		.mini { font-size: fz(11); }
+		&:hover { color: #fff; background: $sub_color; }
+	} // 共通 END
+	.cl-f00 { color: #ff0000; }
 	.intro { text-align: center; margin-bottom: $bs*5;
-		h1 { font-size: fz(18); font-weight: 500; margin-bottom: $bs*3;}
-		.b-txt { line-height: 1.8; }
+		h2 { font-size: fz(20); font-weight: 500; margin-bottom: $bs*3; }
+		.b-txt { }
 		.step-nav { padding-top: $bs*3;
 			a, span { color: $font_color; 
 				display: inline-block; position: relative; font-size: fz(14); background: #fff; border: 1px solid $font_color; padding: $bs $bs*1.5; margin-right: $bs*5; margin-bottom: $bs*3;
@@ -40,5 +47,155 @@ header { }
 				&:hover { color: #fff; background: $sub_color; }
 			}
 		}
-	}
+	} // intro END
+	.guide { width: 100%; max-width: 780px; padding-bottom: $bs*5; border-bottom: 1px solid $font_color; margin: 0 auto $bs*12; 
+		h2 { font-size: fz(20); font-weight: 500; margin-bottom: $bs*3; }
+		.b-txt { margin-bottom: $bs*3; }
+		.g-pt { margin-bottom: $bs*5; 
+			.label { font-weight: 500; margin-bottom: $bs*2;
+				&::before { content: "■"; }
+			}
+			p { margin-bottom: $bs*3; }
+			.addr { font-size: fz(18); font-weight: 500; }
+			.tel { font-size: fz(16); font-weight: 500; vertical-align: baseline; }
+			a.bt-type1 {
+				&.bt-mform { padding: $bs*1.5; }
+			}
+		}
+	} // guide END
+	#mail-form { text-align: center;
+		h2 { font-size: fz(20); font-weight: 500; margin-bottom: $bs*3; }
+		.b-txt { margin-bottom: $bs*5; }
+		.consent { text-align: left; width: 100%; max-width: 780px; margin: 0 auto $bs*5;
+			h3 { font-size: fz(16); font-weight: 500; margin-bottom: $bs*3; }
+			.cons-sec { margin-bottom: $bs*5; }
+			.item { margin-bottom: $bs*3;
+				h4 { font-weight: 500; margin-bottom: $bs;
+					&::before { content: "■"; }
+				}
+				ol { padding-left: $bs*2;
+					li { list-style: disc; line-height: 1.8; }
+				}
+				.cxl-fee { padding: $bs*2 0 0 $bs*2;
+					span.fee { font-size: fz(16);  padding-left: $bs*3; font-weight: 500; vertical-align: baseline; }
+				}
+			}
+		} // .consent END
+		form { text-align: left; width: 100%; max-width: 780px; margin: 0 auto $bs*5;
+			&#apply { padding-top: $bs*5; border-top: 1px solid $border_color; }
+			.unit { line-height: 1.8; padding: $bs*1.5 0; width: 95%; margin: 0 auto $bs;
+				p.label { font-weight: 600; }
+			}
+			dl {
+				dt,dd { padding: $bs 2%; display: inline-block; border: none; vertical-align: middle; border-collapse: separate; }
+				dt { max-width: 120px; width: 20%; text-align: left; 
+					span.item { font-size: fz(14); padding-left: $bs*2; vertical-align: middle; position: relative; font-weight: 600;
+						&.must { 
+							&:before { position: absolute; left: 0; font-size: fz(12); content: "※"; color: #ed1c24; }
+						}
+					}
+				}
+				dd { width: 70%; text-align: left;
+					input { max-width: 250px; width: 75%; font-size: fz(14); padding: $bs $bs*2;
+						&#zip1 { width: 40px; }
+						&#zip2 { width: 56px; }
+						&#prefecture { max-width: 120px; }
+					}
+					textarea { max-width: 320px; width: 75%; font-size: fz(14); padding: $bs $bs*2; border: 1px solid #afafaf;  }
+					select { background: #fff; border: 1px solid #afafaf; max-width: 250px; height: 32px; font-size: fz(14); padding: $bs $bs*3; }
+					.wpcf7-list-item {
+						input[type=radio] { display: inline-block; width: 20px; }
+						.wpcf7-list-item-label { display: inline-block; }
+					}
+				}
+			}
+			
+			input[type=checkbox]{ display:none; }
+			
+			.check_css { position:relative; display:inline-block; font-size: fz(16); font-weight: 600; width: 100%; padding-left: $bs*5; box-sizing: border-box; vertical-align:middle; cursor:pointer;
+				@each $prefix in $set_prefix { #{$prefix}transition: background-color 0.2s linear; }
+				&:hover{
+					&::after { border-color: $font_color; }
+				}
+				&::after { position:absolute; top: 50%; left: 15px; display:block; margin-top: -10px; width: 16px; height: 16px; border: 2px solid #ccc; content:''; 
+					@include border_radius( 6px );  
+					@each $prefix in $set_prefix { #{$prefix}transition: border-color 0.2s linear; }
+				}
+				&::before { position:absolute; top: 50%; left: 21px; display:block; margin-top: -7px; width: 5px; height: 9px; border-right: 3px solid $font_color; border-bottom: 3px solid $font_color; content:''; opacity:0;
+					@each $prefix in $set_prefix { #{$prefix}transition: opacity 0.2s linear; }
+					@each $prefix in $set_prefix { #{$prefix}transform: rotate(45deg);}
+				}
+			}			
+
+			input[type=checkbox]:checked + .check_css:before { opacity: 1; }
+			
+			.submit-area { text-align: center; padding-top: $bs*5;
+				p.att { text-align: left; line-height: 1.7; max-width: 640px; margin: 0 auto $bs*5; }
+				.confirm, .back, .submit { display: inline-block; border: none;
+					input { margin: 0; padding: 0; background: none; border: none; border-radius: 0; outline: none; @each $prefix in $set_prefix { #{$prefix}appearance:none; } }
+				}
+				#submit[disabled] { background: $border_color !important; }
+				.bt-submit { width: 180px; padding: $bs !important; margin: 0 auto !important; font-size: fz(14); color: #fff; text-align: center; letter-spacing: .2em; background: $font_color !important; cursor: pointer; border: none;
+					@each $prefix in $set_prefix { #{$prefix}transition: all 0.3s linear; }
+					&:hover { color: #fff; text-decoration: none; background: rgba($font_color,0.8); }
+				}
+			}	
+		} // form END
+	} // mail-form END
+	
+/// 衣装の予約ページ
+	.plan { text-align: center; width: 100%; max-width: 780px; margin: 0 auto $bs*8; 
+		h2 {font-size: fz(20); font-weight: 500; margin-bottom: $bs*3; }
+		.b-txt { margin-bottom: $bs*3; }
+		.p-nav { margin-bottom: $bs*8; 
+			a.bt-type1 { width: 100%; max-width: 280px; margin: 0 $bs*2; }
+		}
+		.pl-unit { text-align: center; padding: $bs*5 0;  border-bottom: 1px solid $font_color; margin-bottom: $bs*8; 
+			h3 { font-size: fz(16); font-weight: 500; margin-bottom: $bs*3; }
+			.b-txt { text-align: justify; margin-bottom: $bs*3; }
+			ul { letter-spacing: -0.4em; text-align: center; margin-bottom: $bs*3;
+				.label { font-size: fz(16); font-weight: 500; }
+				.item { display: inline-block; max-width: 336px; letter-spacing: .05em; padding: $bs*3 ;
+					.thumb { position: relative;  margin-bottom: $bs*2; text-align: center;
+						a {
+							&:hover { opacity: 0.9; }
+						}
+						img { width: 100%; height: auto; }
+						.bt-type1 { position: absolute; left: 50%; bottom: 16px; transform: translateX( -50%); background: rgba($font_color,0.75); margin-bottom: 0; }
+					}
+					.detail { text-align: justify; }
+				}
+				&.clmn-1 {
+					.item { display: inline-block; width: 100%; max-width: none;
+						.thumb { float: left; width: 35%; max-width: 264px; margin-right: 2%; } 
+						.detail { float: left; width: 62%; text-align: justify; }
+					}
+					
+				}
+			}
+			a.bt-type1 { margin: 0 $bs*2 $bs*2; }
+		}
+	} // plan END
+	
+}
+
+footer { width: 100%; max-width: 960px; box-sizing: border-box; padding: $bs*5 0; border-top: 1px solid $font_color; margin: 0 auto;
+	.access-info { text-align: center; padding: $bs*3 0; margin-bottom: $bs*3;
+		.studio { display: inline-block; margin: 0 $bs*5; text-align: left;
+			h2 { text-align: center; margin-bottom: $bs; 
+				span { vertical-align: middle;
+					&.jpn { font-size: fz(20); font-weight: 600; letter-spacing: .15em; margin-bottom: $bs; }
+					&.eng { font-size: fz(14); font-family: 'Josefin Sans', sans-serif; font-weight: 600; letter-spacing: .15em;}
+				}
+			}
+			p { margin-bottom: $bs/2; line-height: 1.5;
+				&.tel { text-align: center; 
+					.label { font-size: fz(18); margin-right: $bs; vertical-align: baseline; font-weight: 600; }
+					.tel-link { font-size: fz(32); vertical-align: baseline; font-weight: 600;}
+				}	
+				&.addr { font-size: fz(12); margin-bottom: $bs*2; }
+				&.biz-info { font-size: fz(12); letter-spacing: .02em; font-weight: 600; }
+			}
+		}
+	} // access-info END
 }
