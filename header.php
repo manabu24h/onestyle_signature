@@ -1,5 +1,5 @@
 <?php
-	$home = 'http://onestyle-photo.sakura.ne.jp/onestyle/signature/';
+	$home = 'http://sign.onestyle.co.jp/';
 	$img = $home . 'images/';
 ?>
 

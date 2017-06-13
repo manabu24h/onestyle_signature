@@ -13,13 +13,19 @@
 	<!-- // #breadcrumb END -->
 
 	<div id="contents">
+		<?php $id = $_GET['id']; if($id == '1'): ?>
+			<section class="success">
+				<h2>ご予約のお申し込みメールの送信が完了いたしました。</h2>
+			</section>
+		<?php endif; ?>
+		
 		<section class="intro">
 			<h2>ONESTYLE撮影お申込みのご案内</h2>
 			<p class="b-txt">このたびはONESTYLEのフォトウェディングにお申込み頂きありがとうございます！<br class="sp-non" />今後の流れやお申込みの手続きについて、ご確認頂きますようお願い申し上げます。</p>
 			<div class="step-nav">
 				<a href="<?php echo $home; ?>">① 撮影申込書のご提出</a>
 				<span class="flow-current">② お衣装のご予約</span>
-				<a class="flow-last" href="">③ お支払いについて</a>
+				<a class="flow-last" href="<?php echo $home; ?>payment">③ お支払いについて</a>
 			</div>
 		</section>
 		<!-- // .intro END -->
@@ -40,7 +46,7 @@
 			
 			<a name="pl-st" id="pl-st"></a>
 			<section class="pl-unit ">
-				<h3>スタジオスタンダード 1DAY完結プラン （表参道店のみのご案内です）</h3>
+				<h3>スタジオスタンダード 1DAY完結プラン<br />（表参道店のみのご案内です）</h3>
 				<p class="b-txt">撮影1週間前までに、サイズの入力をお願い致します。<br />和装は事前にセレクト頂き、洋装は当日ご試着のうえ、撮影にはいらせて頂きます。<br />なお、衣装の空き状況などのご相談は承っておりません。サイズや素材など気になる方は、スタジオプレミアム（追加1万円）にご変更のうえ、事前試着をされますことをお勧め致します。</p>
 				<ul>
 					<li class="item">
@@ -63,7 +69,7 @@
 					</li>
 				</ul>
 				
-				<a href="" class="bt-type1">サイズの入力・衣装予約</a>
+				<a href="./oneday/" class="bt-type1">サイズの入力・衣装予約</a>
 			</section><!-- // .pl-unit END -->
 			
 			<a name="pl-lc" id="pl-lc"></a>
@@ -74,7 +80,7 @@
 					<li class="item clearfix">
 						<div class="thumb">
 							<a href="">
-								<img src="<?php echo $img ; ?>thumb_pl_st_wa.png" alt="" />
+								<img src="<?php echo $img ; ?>thumb_pl_lc_wa.png" alt="" />
 								<span class="bt-type1">和装カタログ</span>
 							</a>
 						</div>
@@ -82,7 +88,7 @@
 					</li>
 				</ul>
 				
-				<a href="" class="bt-type1">和装見学予約</a>
+				<a href="./jpn/" class="bt-type1">和装見学予約</a>
 				
 				<a href="" class="bt-type1">撮影日に衣装を予約する</a>
 				
@@ -90,7 +96,7 @@
 					<li class="item clearfix">
 						<div class="thumb">
 							<a href="">
-								<img src="<?php echo $img ; ?>thumb_pl_st_dr.png" alt="" />
+								<img src="<?php echo $img ; ?>thumb_pl_lc_dr.png" alt="" />
 								<span class="bt-type1">洋装カタログ</span>
 							</a>
 						</div>
@@ -98,7 +104,7 @@
 					</li>
 				</ul>
 				
-				<a href="" class="bt-type1">洋装の試着予約</a>
+				<a href="./drs/" class="bt-type1">洋装の試着予約</a>
 			</section><!-- // .pl-unit END -->
 		</section>
 		<!-- // .plan END -->

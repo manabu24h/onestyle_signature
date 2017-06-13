@@ -303,78 +303,110 @@ body {
             padding-left: 24px;
             font-weight: 500;
             vertical-align: baseline; }
-    #contents #mail-form form {
+    #contents #mail-form form, #contents #mail-form .check-form {
       text-align: left;
       width: 100%;
       max-width: 780px;
       margin: 0 auto 40px; }
-      #contents #mail-form form#apply {
+      #contents #mail-form form#apply, #contents #mail-form .check-form#apply {
         padding-top: 40px;
         border-top: 1px solid #efebe9; }
-      #contents #mail-form form .unit {
+      #contents #mail-form form .unit, #contents #mail-form .check-form .unit {
         line-height: 1.8;
         padding: 12px 0;
         width: 95%;
         margin: 0 auto 8px; }
-        #contents #mail-form form .unit p.label {
+        #contents #mail-form form .unit p.label, #contents #mail-form .check-form .unit p.label {
           font-weight: 600; }
-      #contents #mail-form form dl dt, #contents #mail-form form dl dd {
+      #contents #mail-form form dl dt, #contents #mail-form form dl dd, #contents #mail-form .check-form dl dt, #contents #mail-form .check-form dl dd {
         padding: 8px 2%;
         display: inline-block;
         border: none;
         vertical-align: middle;
         border-collapse: separate; }
-      #contents #mail-form form dl dt {
+      #contents #mail-form form dl dt, #contents #mail-form .check-form dl dt {
         max-width: 120px;
         width: 20%;
         text-align: left; }
-        #contents #mail-form form dl dt span.item {
+        #contents #mail-form form dl dt span.item, #contents #mail-form .check-form dl dt span.item {
           font-size: 108%;
           padding-left: 16px;
           vertical-align: middle;
           position: relative;
           font-weight: 600; }
-          #contents #mail-form form dl dt span.item.must:before {
+          #contents #mail-form form dl dt span.item.must:before, #contents #mail-form .check-form dl dt span.item.must:before {
             position: absolute;
             left: 0;
             font-size: 93%;
             content: "※";
             color: #ed1c24; }
-      #contents #mail-form form dl dd {
+      #contents #mail-form form dl dd, #contents #mail-form .check-form dl dd {
         width: 70%;
         text-align: left; }
-        #contents #mail-form form dl dd input {
+        #contents #mail-form form dl dd span, #contents #mail-form .check-form dl dd span {
+          vertical-align: baseline; }
+        #contents #mail-form form dl dd input, #contents #mail-form .check-form dl dd input {
           max-width: 250px;
           width: 75%;
           font-size: 108%;
           padding: 8px 16px; }
-          #contents #mail-form form dl dd input#zip1 {
+          #contents #mail-form form dl dd input.w40, #contents #mail-form .check-form dl dd input.w40 {
+            max-width: 40px;
+            margin-bottom: 8px;
+            margin-right: 8px; }
+          #contents #mail-form form dl dd input.w64, #contents #mail-form .check-form dl dd input.w64 {
+            max-width: 64px;
+            margin-bottom: 8px;
+            margin-right: 8px; }
+          #contents #mail-form form dl dd input.w80, #contents #mail-form .check-form dl dd input.w80 {
+            max-width: 80px;
+            margin-bottom: 8px;
+            margin-right: 8px; }
+          #contents #mail-form form dl dd input.w120, #contents #mail-form .check-form dl dd input.w120 {
+            max-width: 120px;
+            margin-bottom: 8px;
+            margin-right: 8px; }
+          #contents #mail-form form dl dd input#zip1, #contents #mail-form .check-form dl dd input#zip1 {
             width: 40px; }
-          #contents #mail-form form dl dd input#zip2 {
+          #contents #mail-form form dl dd input#zip2, #contents #mail-form .check-form dl dd input#zip2 {
             width: 56px; }
-          #contents #mail-form form dl dd input#prefecture {
+          #contents #mail-form form dl dd input#prefecture, #contents #mail-form .check-form dl dd input#prefecture {
             max-width: 120px; }
-        #contents #mail-form form dl dd textarea {
+        #contents #mail-form form dl dd textarea, #contents #mail-form .check-form dl dd textarea {
           max-width: 320px;
           width: 75%;
           font-size: 108%;
           padding: 8px 16px;
           border: 1px solid #afafaf; }
-        #contents #mail-form form dl dd select {
-          background: #fff;
-          border: 1px solid #afafaf;
+        #contents #mail-form form dl dd select, #contents #mail-form .check-form dl dd select {
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          -ms-appearance: none;
+          -o-appearance: none;
+          appearance: none;
+          width: 100%;
           max-width: 250px;
-          height: 32px;
           font-size: 108%;
-          padding: 8px 24px; }
-        #contents #mail-form form dl dd .wpcf7-list-item input[type=radio] {
+          padding: 8px 16px;
+          box-sizing: border-box;
+          border: 1px initial #afafaf;
+          background: url(./images/bg/bg_select_arrow@2x.png) right 50% no-repeat #fff;
+          background-size: 24px,100%; }
+          #contents #mail-form form dl dd select.slc-day, #contents #mail-form .check-form dl dd select.slc-day {
+            max-width: 132px;
+            margin-bottom: 8px;
+            margin-right: 16px; }
+          #contents #mail-form form dl dd select.slc-time, #contents #mail-form .check-form dl dd select.slc-time {
+            max-width: 108px;
+            margin-bottom: 8px; }
+        #contents #mail-form form dl dd .wpcf7-list-item input[type=radio], #contents #mail-form .check-form dl dd .wpcf7-list-item input[type=radio] {
           display: inline-block;
           width: 20px; }
-        #contents #mail-form form dl dd .wpcf7-list-item .wpcf7-list-item-label {
+        #contents #mail-form form dl dd .wpcf7-list-item .wpcf7-list-item-label, #contents #mail-form .check-form dl dd .wpcf7-list-item .wpcf7-list-item-label {
           display: inline-block; }
-      #contents #mail-form form input[type=checkbox] {
+      #contents #mail-form form input[type=checkbox], #contents #mail-form form input[type=radio], #contents #mail-form .check-form input[type=checkbox], #contents #mail-form .check-form input[type=radio] {
         display: none; }
-      #contents #mail-form form .check_css {
+      #contents #mail-form form .check_css, #contents #mail-form .check-form .check_css {
         position: relative;
         display: inline-block;
         font-size: 124%;
@@ -389,9 +421,9 @@ body {
         -ms-transition: background-color 0.2s linear;
         -o-transition: background-color 0.2s linear;
         transition: background-color 0.2s linear; }
-        #contents #mail-form form .check_css:hover::after {
+        #contents #mail-form form .check_css:hover::after, #contents #mail-form .check-form .check_css:hover::after {
           border-color: #363636; }
-        #contents #mail-form form .check_css::after {
+        #contents #mail-form form .check_css::after, #contents #mail-form .check-form .check_css::after {
           position: absolute;
           top: 50%;
           left: 15px;
@@ -412,7 +444,7 @@ body {
           -ms-transition: border-color 0.2s linear;
           -o-transition: border-color 0.2s linear;
           transition: border-color 0.2s linear; }
-        #contents #mail-form form .check_css::before {
+        #contents #mail-form form .check_css::before, #contents #mail-form .check-form .check_css::before {
           position: absolute;
           top: 50%;
           left: 21px;
@@ -434,20 +466,22 @@ body {
           -ms-transform: rotate(45deg);
           -o-transform: rotate(45deg);
           transform: rotate(45deg); }
-      #contents #mail-form form input[type=checkbox]:checked + .check_css:before {
+      #contents #mail-form form input[type=checkbox]:checked + .check_css:before,
+      #contents #mail-form form input[type=radio]:checked + .check_css:before, #contents #mail-form .check-form input[type=checkbox]:checked + .check_css:before,
+      #contents #mail-form .check-form input[type=radio]:checked + .check_css:before {
         opacity: 1; }
-      #contents #mail-form form .submit-area {
+      #contents #mail-form form .submit-area, #contents #mail-form .check-form .submit-area {
         text-align: center;
         padding-top: 40px; }
-        #contents #mail-form form .submit-area p.att {
+        #contents #mail-form form .submit-area p.att, #contents #mail-form .check-form .submit-area p.att {
           text-align: left;
           line-height: 1.7;
           max-width: 640px;
           margin: 0 auto 40px; }
-        #contents #mail-form form .submit-area .confirm, #contents #mail-form form .submit-area .back, #contents #mail-form form .submit-area .submit {
+        #contents #mail-form form .submit-area .confirm, #contents #mail-form form .submit-area .back, #contents #mail-form form .submit-area .submit, #contents #mail-form .check-form .submit-area .confirm, #contents #mail-form .check-form .submit-area .back, #contents #mail-form .check-form .submit-area .submit {
           display: inline-block;
           border: none; }
-          #contents #mail-form form .submit-area .confirm input, #contents #mail-form form .submit-area .back input, #contents #mail-form form .submit-area .submit input {
+          #contents #mail-form form .submit-area .confirm input, #contents #mail-form form .submit-area .back input, #contents #mail-form form .submit-area .submit input, #contents #mail-form .check-form .submit-area .confirm input, #contents #mail-form .check-form .submit-area .back input, #contents #mail-form .check-form .submit-area .submit input {
             margin: 0;
             padding: 0;
             background: none;
@@ -459,9 +493,9 @@ body {
             -ms-appearance: none;
             -o-appearance: none;
             appearance: none; }
-        #contents #mail-form form .submit-area #submit[disabled] {
+        #contents #mail-form form .submit-area #submit[disabled], #contents #mail-form .check-form .submit-area #submit[disabled] {
           background: #efebe9 !important; }
-        #contents #mail-form form .submit-area .bt-submit {
+        #contents #mail-form form .submit-area .bt-submit, #contents #mail-form .check-form .submit-area .bt-submit {
           width: 180px;
           padding: 8px !important;
           margin: 0 auto !important;
@@ -477,7 +511,7 @@ body {
           -ms-transition: all 0.3s linear;
           -o-transition: all 0.3s linear;
           transition: all 0.3s linear; }
-          #contents #mail-form form .submit-area .bt-submit:hover {
+          #contents #mail-form form .submit-area .bt-submit:hover, #contents #mail-form .check-form .submit-area .bt-submit:hover {
             color: #fff;
             text-decoration: none;
             background: rgba(54, 54, 54, 0.8); }
@@ -555,6 +589,37 @@ body {
             text-align: justify; }
       #contents .plan .pl-unit a.bt-type1 {
         margin: 0 16px 16px; }
+  #contents .success {
+    text-align: center;
+    width: 100%;
+    max-width: 780px;
+    padding: 64px 0;
+    margin: 0 auto; }
+    #contents .success h2 {
+      font-size: 124%;
+      font-weight: 500;
+      margin-bottom: 24px; }
+  #contents .flow {
+    text-align: center;
+    width: 100%;
+    max-width: 780px;
+    margin: 0 auto 64px; }
+    #contents .flow h2 {
+      font-size: 154%;
+      font-weight: 500;
+      margin-bottom: 24px; }
+    #contents .flow .b-txt {
+      margin-bottom: 24px; }
+      #contents .flow .b-txt strong {
+        font-weight: 500; }
+    #contents .flow .fl-unit {
+      text-align: left;
+      padding: 40px 0 0;
+      margin-bottom: 40px; }
+      #contents .flow .fl-unit h3 {
+        font-size: 124%;
+        font-weight: 500;
+        margin-bottom: 24px; }
 
 footer {
   width: 100%;

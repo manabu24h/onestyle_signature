@@ -81,7 +81,7 @@ header { }
 				}
 			}
 		} // .consent END
-		form { text-align: left; width: 100%; max-width: 780px; margin: 0 auto $bs*5;
+		form, .check-form { text-align: left; width: 100%; max-width: 780px; margin: 0 auto $bs*5;
 			&#apply { padding-top: $bs*5; border-top: 1px solid $border_color; }
 			.unit { line-height: 1.8; padding: $bs*1.5 0; width: 95%; margin: 0 auto $bs;
 				p.label { font-weight: 600; }
@@ -96,13 +96,24 @@ header { }
 					}
 				}
 				dd { width: 70%; text-align: left;
+					span { vertical-align: baseline; }
 					input { max-width: 250px; width: 75%; font-size: fz(14); padding: $bs $bs*2;
+						&.w40 { max-width: 40px; margin-bottom: $bs; margin-right: $bs; }
+						&.w64 { max-width: 64px; margin-bottom: $bs; margin-right: $bs; }
+						&.w80 { max-width: 80px; margin-bottom: $bs; margin-right: $bs; }
+						&.w120 { max-width: 120px; margin-bottom: $bs; margin-right: $bs; }
 						&#zip1 { width: 40px; }
 						&#zip2 { width: 56px; }
 						&#prefecture { max-width: 120px; }
 					}
 					textarea { max-width: 320px; width: 75%; font-size: fz(14); padding: $bs $bs*2; border: 1px solid #afafaf;  }
-					select { background: #fff; border: 1px solid #afafaf; max-width: 250px; height: 32px; font-size: fz(14); padding: $bs $bs*3; }
+					select { @each $prefix in $set_prefix { #{$prefix}appearance: none; }
+						width: 100%; max-width: 250px; font-size: fz(14); padding: $bs $bs*2; box-sizing: border-box; border: 1px initial #afafaf; 
+						background: url(#{$img_path}bg/bg_select_arrow@2x.png) right 50% no-repeat #fff;
+						background-size: 24px,100%;
+						&.slc-day { max-width: 132px; margin-bottom: $bs; margin-right: $bs*2; }
+						&.slc-time { max-width: 108px; margin-bottom: $bs; }
+					}
 					.wpcf7-list-item {
 						input[type=radio] { display: inline-block; width: 20px; }
 						.wpcf7-list-item-label { display: inline-block; }
@@ -110,7 +121,7 @@ header { }
 				}
 			}
 			
-			input[type=checkbox]{ display:none; }
+			input[type=checkbox],input[type=radio]{ display:none; }
 			
 			.check_css { position:relative; display:inline-block; font-size: fz(16); font-weight: 600; width: 100%; padding-left: $bs*5; box-sizing: border-box; vertical-align:middle; cursor:pointer;
 				@each $prefix in $set_prefix { #{$prefix}transition: background-color 0.2s linear; }
@@ -127,7 +138,8 @@ header { }
 				}
 			}			
 
-			input[type=checkbox]:checked + .check_css:before { opacity: 1; }
+			input[type=checkbox]:checked + .check_css:before,
+			input[type=radio]:checked + .check_css:before { opacity: 1; }
 			
 			.submit-area { text-align: center; padding-top: $bs*5;
 				p.att { text-align: left; line-height: 1.7; max-width: 640px; margin: 0 auto $bs*5; }
@@ -177,6 +189,19 @@ header { }
 		}
 	} // plan END
 	
+/// お支払い方法ページ
+	.success { text-align: center; width: 100%; max-width: 780px; padding: $bs*8 0; margin: 0 auto;
+		h2 {font-size: fz(16); font-weight: 500; margin-bottom: $bs*3; }
+	}
+	.flow { text-align: center; width: 100%; max-width: 780px; margin: 0 auto $bs*8; 
+		h2 {font-size: fz(20); font-weight: 500; margin-bottom: $bs*3; }
+		.b-txt { margin-bottom: $bs*3;
+			strong { font-weight: 500; }
+		}
+		.fl-unit { text-align: left; padding: $bs*5 0 0; margin-bottom: $bs*5; 
+			h3 { font-size: fz(16); font-weight: 500; margin-bottom: $bs*3; }
+		}
+	}
 }
 
 footer { width: 100%; max-width: 960px; box-sizing: border-box; padding: $bs*5 0; border-top: 1px solid $font_color; margin: 0 auto;

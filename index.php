@@ -18,7 +18,7 @@
 			<div class="step-nav">
 				<span class="flow-current">① 撮影申込書のご提出</span>
 				<a href="<?php echo $home; ?>rsrv/">② お衣装のご予約</a>
-				<a class="flow-last" href="">③ お支払いについて</a>
+				<a class="flow-last" href="<?php echo $home; ?>payment">③ お支払いについて</a>
 			</div>
 		</section>
 		<!-- // .intro END -->
@@ -52,7 +52,7 @@
 			<div class="g-pt">
 				<div class="label">フォームで送信</div>
 				<p>下記の撮影お申込みフォームで、お客様情報を入力して頂き、撮影のお申込みにあたる同意欄にチェックして送信してください。</p>
-				<a href="" class="bt-type1 bt-mform">撮影お申込みフォーム</a>
+				<a href="#mail-form" class="bt-type1 bt-mform">撮影お申込みフォーム</a>
 			</div>
 			<!-- // フォームで送信 END -->
 		</section>
