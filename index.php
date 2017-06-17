@@ -180,20 +180,20 @@
 						$b_name='';
 						$date='';
 						$tel ='';
-						$mail ='';
+						$email ='';
 						$zip1 ='';
 						$zip2 ='';
 						$pref ='';
-						$aaddr ='';
-						if( isset($_SESSION['g_name'])){ $name = $_SESSION['g_name']; }
-						if( isset($_SESSION['b_name'])){ $name = $_SESSION['b_name']; }
-						if( isset($_SESSION['date'])){ $name = $_SESSION['date']; }
-						if( isset($_SESSION['tel'])){ $name = $_SESSION['tel']; }
-						if( isset($_SESSION['mail'])){ $name = $_SESSION['mail']; }
-						if( isset($_SESSION['zip1'])){ $name = $_SESSION['zip1']; }
-						if( isset($_SESSION['zip2'])){ $name = $_SESSION['zip2']; }
-						if( isset($_SESSION['pref'])){ $name = $_SESSION['pref']; }
-						if( isset($_SESSION['addr'])){ $name = $_SESSION['addr']; }
+						$addr ='';
+						if( isset($_SESSION['g_name'])){ $g_name= $_SESSION['g_name']; }
+						if( isset($_SESSION['b_name'])){ $b_name = $_SESSION['b_name']; }
+						if( isset($_SESSION['date'])){ $date = $_SESSION['date']; }
+						if( isset($_SESSION['tel'])){ $tel = $_SESSION['tel']; }
+						if( isset($_SESSION['email'])){ $email = $_SESSION['email']; }
+						if( isset($_SESSION['zip1'])){ $zip1 = $_SESSION['zip1']; }
+						if( isset($_SESSION['zip2'])){ $zip2 = $_SESSION['zip2']; }
+						if( isset($_SESSION['pref'])){ $pref = $_SESSION['pref']; }
+						if( isset($_SESSION['addr'])){ $addr = $_SESSION['addr']; }
 				?>
 				
 				<script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
@@ -256,7 +256,7 @@
 						</dl>
 						<dl>
 							<dt><span class="item">メールアドレス</span></dt>
-							<dd><input type="text" name="your-mail" value="<?php echo $mail; ?>" size="40" class="validate[required,custom[email]]" id="your-mail" aria-required="true" aria-invalid="false" placeholder="半角で入力してください" /></dd>
+							<dd><input type="text" name="email" value="<?php echo $email; ?>" size="40" class="validate[required,custom[email]]" id="email" aria-required="true" aria-invalid="false" placeholder="半角で入力してください" /></dd>
 						</dl>
 						<dl>
 							<dt><span class="item">郵便番号</span></dt>

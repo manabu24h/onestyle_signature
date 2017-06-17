@@ -71,8 +71,6 @@ $_POST['time2_return'] = $_SESSION['time2_return'];
 
 ?>
 
-<script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
-
 <script>
 	$(function() {
 		jQuery("#apply").validationEngine();
