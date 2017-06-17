@@ -229,12 +229,14 @@
 						<label for="check" class="check_css">上記の内容に同意のうえ、撮影の申込みを致します。</label>
 					</div>
 					
+<!--
 					<div class="unit">
 						<p class="label">《お申込み日》</p>
 						<dl>
 							<dd><input id="datepicker" type="text" name="date" value="<?php echo $date; ?>" size="40" class="validate[required]" aria-required="true" aria-invalid="false" placeholder="YYYY/MM/DD" /></dd>
 						</dl>			
 					</div>
+-->
 					
 					<div class="unit">
 						<p class="label">《おふたりの氏名》</p>
@@ -247,6 +249,22 @@
 							<dd><input type="text" name="bride-name" value="<?php echo $b_name; ?>" size="40" class="validate[required]" id="bride-name" aria-required="true" aria-invalid="false" /></dd>
 						</dl>			
 					</div>
+					
+					<div class="unit">
+						<p class="label">《サンプル使用許諾》</p>
+						<dl>
+						<dl>
+							<dd>
+								<input type="radio" id="radio_sm1" name="radio_venue" value="可" />
+								<label for="radio_sm1" class="check_css">可</label>
+							</dd>
+							<dd>
+								<input type="radio" id="radio_sm2" name="radio_venue" value="不可" />
+								<label for="radio_sm2" class="check_css">不可</label>
+							</dd>
+						</dl>	
+						</dl>			
+					</div>					
 					
 					<div class="unit">
 						<p class="label">《代表の方のご連絡先》</p>
