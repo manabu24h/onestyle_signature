@@ -1,5 +1,6 @@
 <?php // 共通ヘッダー
 	$Path = $_SERVER['DOCUMENT_ROOT'] . '/onestyle/signature/';
+        //$Path = $_SERVER['DOCUMENT_ROOT'] . "/";
 	include( $Path . 'header.php');
 ?>
 
@@ -242,11 +243,11 @@
 						<p class="label">《おふたりの氏名》</p>
 						<dl>
 							<dt><span class="item">新郎様</span></dt>
-							<dd><input type="text" name="groom-name" value="<?php echo $g_name; ?>" size="40" class="validate[required]" id="groom-name" aria-required="true" aria-invalid="false" /></dd>
+							<dd><input type="text" name="groom_name" value="<?php echo $g_name; ?>" size="40" class="validate[required]" id="groom-name" aria-required="true" aria-invalid="false" /></dd>
 						</dl>
 						<dl>
 							<dt><span class="item">新婦様</span></dt>
-							<dd><input type="text" name="bride-name" value="<?php echo $b_name; ?>" size="40" class="validate[required]" id="bride-name" aria-required="true" aria-invalid="false" /></dd>
+							<dd><input type="text" name="bride_name" value="<?php echo $b_name; ?>" size="40" class="validate[required]" id="bride-name" aria-required="true" aria-invalid="false" /></dd>
 						</dl>			
 					</div>
 					
@@ -255,11 +256,11 @@
 						<dl>
 						<dl>
 							<dd>
-								<input type="radio" id="radio_sm1" name="radio_venue" value="可" />
+								<input type="radio" id="radio_sm1" name="radio_venue" value="1" />
 								<label for="radio_sm1" class="check_css">可</label>
 							</dd>
 							<dd>
-								<input type="radio" id="radio_sm2" name="radio_venue" value="不可" />
+								<input type="radio" id="radio_sm2" name="radio_venue" value="0" />
 								<label for="radio_sm2" class="check_css">不可</label>
 							</dd>
 						</dl>	
@@ -270,7 +271,7 @@
 						<p class="label">《代表の方のご連絡先》</p>
 						<dl>
 							<dt><span class="item">電話番号</span></dt>
-							<dd><input type="text" name="tel-no" value="<?php echo $tel; ?>" size="40" class="validate[required,custom[phone]]" id="tel-no" aria-required="true" aria-invalid="false" placeholder="市外局番から入力（携帯電話可）" /></dd>
+							<dd><input type="text" name="tel_no" value="<?php echo $tel; ?>" size="40" class="validate[required,custom[phone]]" id="tel-no" aria-required="true" aria-invalid="false" placeholder="市外局番から入力（携帯電話可）" /></dd>
 						</dl>
 						<dl>
 							<dt><span class="item">メールアドレス</span></dt>

@@ -1,5 +1,6 @@
 <?php // 共通ヘッダー
 	$Path = $_SERVER['DOCUMENT_ROOT'] . '/onestyle/signature/';
+        //$Path = $_SERVER['DOCUMENT_ROOT'] . "/";
 	include( $Path . 'header.php');
 ?>
 
@@ -15,16 +16,16 @@
 	<div id="contents">
 		<?php
 		//$_POST['name'] →$nameへ、$name= 値（江藤）といった具合で挿入されます
-		foreach($_POST as $k=>$v){
-		  $$k=$v;
-		}
-		//値をセッションに入れる
 		session_start();
-		$_SESSION['name']=$name;
+		foreach($_POST as $k=>$v){
+		  $_SESSION["data"][$k] = $v;
+		}
 		?>
 		
 		<!-- 入力した値が表示されます -->
-		<?php echo $name; ?>
+                <?php foreach ($_POST as $v) { ?>
+		<p><?php echo $v; ?></p>
+                <?php } ?>
 		
 		<p><a href="index.php">戻る</a></p>
 		<p><a href="send.php">送る</a></p>
