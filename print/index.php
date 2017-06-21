@@ -1,14 +1,19 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT']."/lib/Database.php";
 $db = Database::getConnection();
-$id = $_GET["id"];
+if (isset($_GET["id"]) && !empty($_GET["id"])) {
+    $id = $_GET["id"];
 
-$stmt = $db->query("SELECT * FROM customers WHERE id=".$id);
-$data = $stmt->fetch(PDO::FETCH_ASSOC);
+    $stmt = $db->query("SELECT * FROM customers WHERE id=".$id);
+    $data = $stmt->fetch(PDO::FETCH_ASSOC);
 
-$sp_date = explode(" ", $data["created_at"]);
-$sp_date = explode("-", $sp_date[0]);
-$do_date = $sp_date[0] . "年" . $sp_date[1] . "月" . $sp_date[2] . "日";
+    $sp_date = explode(" ", $data["created_at"]);
+    $sp_date = explode("-", $sp_date[0]);
+    $do_date = $sp_date[0] . "年" . $sp_date[1] . "月" . $sp_date[2] . "日";
+} else {
+    header('Location: index.php');
+    exit;
+}
 
 ?>
 

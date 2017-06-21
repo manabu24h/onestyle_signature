@@ -7,6 +7,10 @@ $Path = $_SERVER['DOCUMENT_ROOT'] . '/onestyle/signature/';
 // 問い合わせ内容をDBに格納
 $db = Database::getConnection();
 session_start();
+if (!isset($_SESSION["data"])) {
+    header('Location: index.php');
+    exit;
+}
 $keys = array_keys($_SESSION["data"]);
 $keys[] = "created_at";
 $insert = 'INSERT INTO customers (' . implode(",",$keys) . ') values(';
@@ -29,7 +33,10 @@ try {
     echo $e->getMessage();exit;
 }
 
-//session_destroy();
+session_destroy();
+
+// formの中身が見たい時はこのコードのコメントアウトを外して下さい
+//var_dump($params);exit;
 	
 //Qdmailをロード
 require_once( $Path . 'lib/qdmail.php');
@@ -157,7 +164,7 @@ EOD;
 }
 
 // 変数を出力
-echo $mail_body;
+//echo $mail_body;
  
 //メール本文(テキストメール) ※HTMLメールの場合は$mail ->html(‘<タグ><タグ>');
 $mail ->text($mail_body);
