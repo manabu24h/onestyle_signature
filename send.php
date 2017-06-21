@@ -3,7 +3,6 @@
 require_once "lib/Database.php";
 $Path = $_SERVER['DOCUMENT_ROOT'] . '/onestyle/signature/';
 //$Path = $_SERVER['DOCUMENT_ROOT'] . "/";
-include( $Path . 'header.php');
 
 // 問い合わせ内容をDBに格納
 $db = Database::getConnection();
