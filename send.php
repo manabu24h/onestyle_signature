@@ -44,7 +44,7 @@ require_once( $Path . 'lib/qdmail.php');
 //（ドキュメントには、記述不要とかいてあるが、書かないとうまくいかないことがあった）
 require_once( $Path . 'lib/qdsmtp.php');
 
-$mail_send_list = ["nishio@onelife.jp", "wedding@onestyle.co.jp"];
+$mail_send_list = ["nishio@onelife.jp", "manabu24h@gmail.com"];
 //$mail_send_list = [$params["email"], "wedding@onestyle.co.jp"];  // 本番公開用
 
 foreach ($mail_send_list as $key => $val) {
@@ -71,7 +71,7 @@ $param = array(
 );
 $mail -> smtpServer($param);
 	
-$to[] = array($val, '');
+$to = $val;
 $mail -> to($to);
 // $mail -> bcc('wedding@onestyle.co.jp', '');
 
@@ -174,10 +174,11 @@ $flag[] = $mail->send();
 }
 if ($flag[0] == TRUE && $flag[1] == TRUE) {
 	// 送信成功
-	header('Location: index.php');
+	header('Location: index.php?id='.$insertId);
 	exit;
 } else {
 	// 送信失敗
-	header('Location: index.php');
+	// header('Location: index.php');
+	echo '失敗';
 	exit;
 }

@@ -257,11 +257,11 @@
 						<dl>
 							<dd>
 								<input type="radio" id="radio_sm1" name="radio_venue" value="1" />
-								<label for="radio_sm1" class="check_css">可</label>
+								<label for="radio_sm1" class="check_css">使用可</label>
 							</dd>
 							<dd>
 								<input type="radio" id="radio_sm2" name="radio_venue" value="0" />
-								<label for="radio_sm2" class="check_css">不可</label>
+								<label for="radio_sm2" class="check_css">使用不可</label>
 							</dd>
 						</dl>	
 						</dl>			

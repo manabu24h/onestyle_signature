@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+/*
+Theme Name: ONESTYLE Original
+Description:  ONESTYLE撮影のお申込み書
+Author: NISHIO KIKAKU
+*/
+
+// ===================================================================
+// 各SCSSファイルのインポート 
+// ===================================================================
+
+// google フォント
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600|Poppins:300');
+@import url('http://fonts.googleapis.com/earlyaccess/notosansjapanese.css');
+
+// セッティング
+@import "setting";
+
+// リセットCSS、フォントサイズ
+@import "reset";
+
+// MIXIN
+@import "mixin";
+
+.hidden-print { display: none; }
+html { height: 100%; color: $font_color; }
+body { width: 172mm !important; height: 251mm !important; margin: 0 auto; letter-spacing: .02em; line-height: 1; background: #fff; font-family: 'Noto Sans Japanese', sans-serif; }
+
+#container { width: 100%; padding: $bs 0 0;
+	h2 { text-align: center; font-size: fz(10); font-weight: 600; margin-bottom: $bs*2; letter-spacing: 0.2em; }
+	.consent { font-size: fz(10);
+		.cons-sec { margin-bottom: $bs*1.75;}
+		h3 { font-weight: 600; margin-bottom: $bs; letter-spacing: 0.2em;}
+		.item { margin-bottom: $bs;
+			h4 {font-weight: 600; margin-bottom: $bs/2; letter-spacing: 0.06em; }
+			p { line-height: 1.02; }
+			ol { line-height: 1.02; padding-left: $bs;
+				li { margin-bottom: $bs/4; }
+			}
+			.cxl-fee { padding: $bs/2 0 0 $bs*2; line-height: 1.02;
+				span.fee { padding-left: $bs*1.5; font-weight: 600; vertical-align: baseline; }
+			}
+		}
+	}
+	.apply { padding: $bs 0 0; font-size: fz(11);
+		p { line-height: 1; letter-spacing: 0.06em; display: inline-block; padding-bottom: $bs;
+			&.note { font-weight: 600; margin-bottom: $bs; }
+			.label {}
+			.val { display: inline-block; font-weight: 600; padding-right: $bs*4;}
+		}
+		dl {
+			dd { border-bottom: 1px solid $font_color; margin-bottom: $bs*1.5;
+				&:last-child { border-bottom: none; margin-bottom: 0;}
+			}
+		}
+	}
+}
+
