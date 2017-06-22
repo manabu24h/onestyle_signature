@@ -80,23 +80,48 @@ $mail ->subject('ONESTYLE撮影お申込み');
 
 // 送信元をセット
 $mail -> from('wedding@onestyle.co.jp','ONESTYLE');
+
+// プランの内容で分岐
+if($params["radio_venue"] == '1'){
+$radio_value = <<<EOC
+使用可
+EOC;
+}else{
+$radio_value = <<<EOC
+使用不可
+EOC;
+}
+
 	
 // ヒアドキュメント全体を変数に格納（タブスペース不可）
 if ($key == 0) {
 // 申し込み者側のメール本文
 $mail_body = <<<EOD
-この度は、ご予約をいただき誠にありがとうございます。
-以下の内容で受け付けいたしました。
-(本メールは、予約確定のお知らせではございません)
+この度は、撮影のお申込みをいただきありがとうございます。
+以下の内容で、お申込みを承りました。
 
-内容確認後、ご連絡をさせていただきます。
+内容を確認後、担当者よりご連絡をさせていただきます。
 なお回答には、数日かかることがございますので、ご了承願います。
 
-■ご予約の内容：洋装の試着予約
+==【お問い合わせ内容】=====================
 
-■おふたりの氏名
+撮影申込 No. {$insertId}
+
+《おふたりの氏名》
 新郎様：{$params["groom_name"]}
 新婦様：{$params["bride_name"]}
+
+《代表の方のご連絡先》
+メールアドレス：{$params["email"]}
+電話番号：{$params["tel_no"]}
+住所：
+{$params["zip1"]}-{$params["zip2"]}
+{$params["prefecture"]}{$params["address"]}
+
+《サンプル使用許諾》
+{$radio_value}
+
+===========================================
 
 --
 /・/・/・/・/・/・/・/・/・/・/・/・/・/・/・/・/・/・/
@@ -127,39 +152,29 @@ EOD;
 // 管理者側メール本文
 $mail_body = <<<EOD
 
-■ご予約の内容：洋装の試着予約
+==【お問い合わせ内容】=====================
 
-■おふたりの氏名
+撮影申込 No. {$insertId}
+
+《申込書印刷 URL》
+http://sign.onestyle.co.jp/print/index.php?id={$insertId}
+
+《おふたりの氏名》
 新郎様：{$params["groom_name"]}
 新婦様：{$params["bride_name"]}
 
-案内テンプレートURL
-http://sign.onestyle.co.jp/print/index.php?id={$insertId}
+《代表の方のご連絡先》
+メールアドレス：{$params["email"]}
+電話番号：{$params["tel_no"]}
+住所：
+{$params["zip1"]}-{$params["zip2"]}
+{$params["prefecture"]}{$params["address"]}
 
---
-/・/・/・/・/・/・/・/・/・/・/・/・/・/・/・/・/・/・/
-結婚写真ONESTYLE (ワンスタイル)
-http://weddingphoto.onestyle.co.jp
+《サンプル使用許諾》
+{$radio_value}
 
-【営業時間】
-平日 12:00-19:00 (火曜定休) | 土日祝 10:00-19:00
+===========================================
 
-≪e-mail≫
-wedding@onestyle.co.jp
-
-≪表参道店≫
-〒150-0001　東京都渋谷区神宮前3-38-1 JP-4ビル1階
-tel:03-6721-0592　fax:03-6721-0594
-
-≪横浜店≫
-〒231-0011　神奈川県横浜市中区太田町6-75 関内北原不動産ビル603
-tel:045-306-7422　fax:045-306-7499
-
-↓新着情報を更新しておりますのでご覧下さい
-スタッフブログ：http://weddingphoto.onestyle.co.jp/blog
-Facebook：https://www.facebook.com/WEDDINGPHOTO.ONESTYLE
-Twitter：https://twitter.com/onestyle_weddin
-/・/・/・/・/・/・/・/・/・/・/・/・/・/・/・/・/・/・/
 EOD;
 }
 
@@ -174,7 +189,7 @@ $flag[] = $mail->send();
 }
 if ($flag[0] == TRUE && $flag[1] == TRUE) {
 	// 送信成功
-	header('Location: index.php?id='.$insertId);
+	header('Location: rsrv/index.php?id='.$insertId);
 	exit;
 } else {
 	// 送信失敗

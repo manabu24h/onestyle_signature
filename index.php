@@ -179,22 +179,34 @@
 					session_start();
 						$g_name='';
 						$b_name='';
-						$date='';
 						$tel ='';
 						$email ='';
 						$zip1 ='';
 						$zip2 ='';
 						$pref ='';
 						$addr ='';
-						if( isset($_SESSION['g_name'])){ $g_name= $_SESSION['g_name']; }
-						if( isset($_SESSION['b_name'])){ $b_name = $_SESSION['b_name']; }
-						if( isset($_SESSION['date'])){ $date = $_SESSION['date']; }
-						if( isset($_SESSION['tel'])){ $tel = $_SESSION['tel']; }
-						if( isset($_SESSION['email'])){ $email = $_SESSION['email']; }
-						if( isset($_SESSION['zip1'])){ $zip1 = $_SESSION['zip1']; }
-						if( isset($_SESSION['zip2'])){ $zip2 = $_SESSION['zip2']; }
-						if( isset($_SESSION['pref'])){ $pref = $_SESSION['pref']; }
-						if( isset($_SESSION['addr'])){ $addr = $_SESSION['addr']; }
+						// $date='';
+						// if( isset($_SESSION["data"]['date'])){ $date = $_SESSION["data"]['date']; }
+						if( isset($_SESSION["data"]['groom_name'])){ $g_name= $_SESSION["data"]['groom_name']; }
+						if( isset($_SESSION["data"]['bride_name'])){ $b_name = $_SESSION["data"]['bride_name']; }
+						if( isset($_SESSION["data"]['tel_no'])){ $tel = $_SESSION["data"]['tel_no']; }
+						if( isset($_SESSION["data"]['email'])){ $email = $_SESSION["data"]['email']; }
+						if( isset($_SESSION["data"]['zip1'])){ $zip1 = $_SESSION["data"]['zip1']; }
+						if( isset($_SESSION["data"]['zip2'])){ $zip2 = $_SESSION["data"]['zip2']; }
+						if( isset($_SESSION["data"]['prefecture'])){ $pref = $_SESSION["data"]['prefecture']; }
+						if( isset($_SESSION["data"]['address'])){ $addr = $_SESSION["data"]['address']; }
+						
+						/* 確認画面から戻った時に、inputタグ内に「checked」を代入して複数選択を引き継ぐ。 */
+						// サンプル使用許諾
+						if( isset($_SESSION['radio_v_return'])){
+							if($_SESSION['radio_v_return'] == '1'){
+							$p_chk1 = 'checked';
+							}
+							if($_SESSION['radio_v_return'] == '0'){
+							$p_chk2 = 'checked';
+							}
+						}else{
+						}
 				?>
 				
 				<script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
@@ -216,15 +228,17 @@
 						$('#check').on('click', function() {
 							if ($(this).prop('checked') == false) {
 								$('#submit').prop('disabled', true);
+								$('#submit').attr({"value":"同意にチェックする"});
 							} else {
 								$('#submit').prop('disabled', false);
+								$('#submit').attr({"value":"確認画面へ進む"});
 							}
 						});
 					});
 				</script>
 
 				
-				<form id="apply" action="check.php" method="POST" >
+				<form id="apply" name="apply" action="check.php" method="POST" >
 					<div class="unit">
 						<input type="checkbox" id="check" />
 						<label for="check" class="check_css">上記の内容に同意のうえ、撮影の申込みを致します。</label>
@@ -256,11 +270,11 @@
 						<dl>
 						<dl>
 							<dd>
-								<input type="radio" id="radio_sm1" name="radio_venue" value="1" />
+								<input type="radio" id="radio_sm1" name="radio_venue" value="1" <?= $p_chk1 ?> />
 								<label for="radio_sm1" class="check_css">使用可</label>
 							</dd>
 							<dd>
-								<input type="radio" id="radio_sm2" name="radio_venue" value="0" />
+								<input type="radio" id="radio_sm2" name="radio_venue" value="0" <?= $p_chk2 ?> />
 								<label for="radio_sm2" class="check_css">使用不可</label>
 							</dd>
 						</dl>	
@@ -297,7 +311,7 @@
 							・迷惑メール防止の設定をされている場合は、「@onestyle.co.jp」をドメイン指定解除してください。
 						</p>
 						<div class="submit">
-							<input id="submit" type="submit" value="確認画面へ進む" class="bt-submit" />
+							<input id="submit" type="submit" value="同意にチェックする" class="bt-submit" />
 						</div>
 					</div>
 				</form>
