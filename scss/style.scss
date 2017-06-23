@@ -26,21 +26,5 @@ Author: NISHIO KIKAKU
 // レイアウト
 @import "layout";
 
-
-/*
-	
-// レイアウト
-@import "drawer";
-
-// ページ
-@import "page";
-
-// シングル
-@import "single";
-
-// 共通 w:768px 以下
-@import "mobile/base";
-
-// スマートフォン w:640px 以下
-@import "mobile/phone";
-*/
+// スマートフォン w:750px 以下
+@import "phone";

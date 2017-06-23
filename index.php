@@ -16,7 +16,7 @@
 		<section class="intro">
 			<h2>ONESTYLE撮影お申込みのご案内</h2>
 			<p class="b-txt">このたびはONESTYLEのフォトウェディングにお申込み頂きありがとうございます！<br class="sp-non" />今後の流れやお申込みの手続きについて、ご確認頂きますようお願い申し上げます。</p>
-			<div class="step-nav">
+			<div class="step-nav sp-non">
 				<span class="flow-current">① 撮影申込書のご提出</span>
 				<a href="<?php echo $home; ?>rsrv/">② 衣装のご予約</a>
 				<a class="flow-last" href="<?php echo $home; ?>payment">③ お支払いについて</a>
@@ -35,7 +35,7 @@
 					<span class="addr">〒150-0001 渋谷区神宮前3-38-1 JP-4ビル1階<br />株式会社ONESTYLE　撮影予約係　行</span><br />
 					ご持参頂ける方は、ONESTYLE表参道店もしくは、横浜店のスタッフにお渡しください。
 				</p>
-				<a href="" class="bt-type1">撮影申込書をダウンロード<br /><span class="mini">PDF （ ○○○ kb）</span></a>
+				<a href="./file/application_guide.pdf" target="_blank" class="bt-type1">撮影申込書をダウンロード<br /><span class="mini">PDF（978kb）</span></a>
 			</div>
 			<!-- // ご来店もしくは郵送 END -->
 			
@@ -46,14 +46,14 @@
 					大変お手数ですが、FAX送信後<br />
 					お電話にてご連絡をお願い致します。<br />
 					TEL番号 <span class="tel">03-6721-0592</span>&nbsp;&nbsp;ONESTYLE表参道店宛て				</p>
-				<a href="" class="bt-type1">撮影申込書をダウンロード<br /><span class="mini">PDF （ ○○○ kb）</span></a>
+				<a href="./file/application_guide.pdf" target="_blank" class="bt-type1">撮影申込書をダウンロード<br /><span class="mini">PDF（978kb）</span></a>
 			</div>
 			<!-- // FAXでの送信 END -->
 			
 			<div class="g-pt">
 				<div class="label">フォームで送信</div>
 				<p>下記の撮影お申込みフォームで、お客様情報を入力して頂き、撮影のお申込みにあたる同意欄にチェックして送信してください。</p>
-				<a href="#mail-form" class="bt-type1 bt-mform">撮影お申込みフォーム</a>
+				<a href="#apply" class="bt-type1 bt-mform">撮影お申込みフォーム</a>
 			</div>
 			<!-- // フォームで送信 END -->
 		</section>

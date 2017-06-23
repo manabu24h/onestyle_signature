@@ -137,6 +137,10 @@ body {
   background: #fff;
   font-family: 'Noto Sans Japanese', sans-serif; }
 
+.sp-on {
+  display: none;
+  visibility: hidden; }
+
 #container {
   width: 100%;
   box-sizing: border-box;
@@ -673,22 +677,120 @@ footer {
           letter-spacing: .02em;
           font-weight: 600; }
 
-/*
-	
-// レイアウト
-@import "drawer";
+@media screen and (max-width: 750px) {
+  .sp-non {
+    display: none;
+    visibility: hidden; }
 
-// ページ
-@import "page";
+  .sp-on {
+    display: block;
+    visibility: visible; }
 
-// シングル
-@import "single";
+  p {
+    text-align: justify; }
 
-// 共通 w:768px 以下
-@import "mobile/base";
+  #contents .plan .p-nav {
+    margin-bottom: 40px; }
+    #contents .plan .p-nav a.bt-type1 {
+      width: 100%;
+      max-width: 280px;
+      margin: 0 16px 16px !important;
+      box-sizing: border-box; }
+  #contents .plan .pl-unit {
+    text-align: center;
+    padding: 40px 0;
+    border-bottom: 1px solid #363636;
+    margin-bottom: 64px; }
+    #contents .plan .pl-unit h3 {
+      text-align: left; }
+    #contents .plan .pl-unit .b-txt {
+      text-align: justify;
+      margin-bottom: 24px; }
+    #contents .plan .pl-unit ul {
+      letter-spacing: -0.4em;
+      text-align: center;
+      margin-bottom: 24px; }
+      #contents .plan .pl-unit ul .label {
+        font-size: 124%;
+        font-weight: 500; }
+      #contents .plan .pl-unit ul .item {
+        display: inline-block;
+        max-width: 336px;
+        letter-spacing: .05em;
+        padding: 24px;
+        box-sizing: border-box; }
+        #contents .plan .pl-unit ul .item .thumb {
+          position: relative;
+          margin-bottom: 16px;
+          text-align: center; }
+          #contents .plan .pl-unit ul .item .thumb a:hover {
+            opacity: 0.9; }
+          #contents .plan .pl-unit ul .item .thumb img {
+            width: 100%;
+            height: auto; }
+          #contents .plan .pl-unit ul .item .thumb .bt-type1 {
+            position: absolute;
+            left: 50%;
+            bottom: 16px;
+            transform: translateX(-50%);
+            background: rgba(54, 54, 54, 0.75);
+            margin-bottom: 0; }
+        #contents .plan .pl-unit ul .item .detail {
+          text-align: justify; }
+      #contents .plan .pl-unit ul.clmn-1 .item {
+        display: inline-block;
+        width: 100%;
+        max-width: 336px;
+        letter-spacing: .05em;
+        padding: 24px;
+        box-sizing: border-box; }
+        #contents .plan .pl-unit ul.clmn-1 .item .thumb {
+          float: none;
+          width: 100%;
+          max-width: none;
+          box-sizing: border-box;
+          margin-right: 0;
+          margin-bottom: 16px; }
+        #contents .plan .pl-unit ul.clmn-1 .item .detail {
+          float: none;
+          width: 100%;
+          text-align: justify;
+          box-sizing: border-box; }
+    #contents .plan .pl-unit a.bt-type1 {
+      margin: 0 16px 16px; }
 
-// スマートフォン w:640px 以下
-@import "mobile/phone";
-*/
+  form, .check-form {
+    text-align: left;
+    width: 100%;
+    max-width: 780px;
+    margin: 0 auto 40px; }
+    form dl dt, form dl dd, .check-form dl dt, .check-form dl dd {
+      padding: 8px 0 !important; }
+    form dl dt, .check-form dl dt {
+      width: 100% !important; }
+    form dl dd, .check-form dl dd {
+      width: 100% !important; }
+
+  a.tel-link {
+    color: #363636; }
+
+  footer .step-nav {
+    padding: 12px 24px 24px;
+    box-sizing: border-box; }
+    footer .step-nav a, footer .step-nav span {
+      display: inline-block;
+      width: 100%;
+      color: #363636;
+      text-align: center;
+      box-sizing: border-box;
+      position: relative;
+      font-size: 108%;
+      background: #fff;
+      border: 1px solid #363636;
+      padding: 8px;
+      margin-bottom: 24px; }
+    footer .step-nav a:hover {
+      color: #fff;
+      background: #5e5e5e; } }
 
 /*# sourceMappingURL=style.css.map */

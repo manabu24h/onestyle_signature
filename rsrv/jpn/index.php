@@ -64,7 +64,7 @@ if( isset($_SESSION['waso_3'])){ $waso_3 = $_SESSION['waso_3']; }
 	<!-- // #breadcrumb END -->
 
 	<div id="contents">
-		<div class="intro">
+		<div class="intro sp-non">
 			<div class="step-nav">
 				<a href="<?php echo $home; ?>">① 撮影申込書のご提出</a>
 				<span class="flow-current">② 衣装のご予約</span>

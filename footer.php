@@ -5,6 +5,12 @@
 
 
 <footer>
+	<div class="step-nav sp-on">
+		<a href="<?php echo $home; ?>">① 撮影申込書のご提出</a>
+		<a href="<?php echo $home; ?>rsrv/">② 衣装のご予約</a>
+		<a href="<?php echo $home; ?>payment/">③ お支払いについて</a>
+	</div>
+	
 	<div class="access-info">
 		<section class="studio std-01">
 			<h2><span class="jpn">表参道店</span><br /><span class="eng">OMOTESANDO</span></h2>
