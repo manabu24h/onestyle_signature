@@ -10,13 +10,14 @@ foreach($_POST as $k=>$v){
 }
 //値をセッションに入れる
 session_start();
-// $_SESSION['kana']=$kana;
-// $_SESSION['email']=$email;
+
+$_SESSION['date']=$date;
 $_SESSION['g_name']=$g_name;
+$_SESSION['b_name']=$b_name;
+$_SESSION['email']=$email;
 $_SESSION['g_height']=$g_height;
 $_SESSION['g_size']=$g_size;
 $_SESSION['g_shoe']=$g_shoe;
-$_SESSION['b_name']=$b_name;
 $_SESSION['b_height']=$b_height;
 $_SESSION['b_size']=$b_size;
 $_SESSION['b_shoe']=$b_shoe;
@@ -38,7 +39,7 @@ $_SESSION['time2_return'] = $slc_time2;
 	<div id="breadcrumb">
 		<ul>
 			<li><h1><a href="<?php echo $home; ?>">ONESTYLE撮影お申込みのご案内</a><span class="arrow">＞</span></h1></li>
-			<li><a href="<?php echo $home; ?>rsrv">お衣装のご予約</a><span class="arrow">＞</span></li>
+			<li><a href="<?php echo $home; ?>rsrv">衣装のご予約</a><span class="arrow">＞</span></li>
 			<li><a href="">洋装の試着予約</a></li>
 		</ul>
 	</div>
@@ -52,6 +53,12 @@ $_SESSION['time2_return'] = $slc_time2;
 				
 				<div class="check-form">
 					<div class="unit">
+						<p class="label">《撮影日》</p>
+						<dl>
+							<dd><p class="value"><?php echo $date; ?></p></dd>
+						</dl>			
+					</div>
+					<div class="unit">
 						<p class="label must">《おふたりの氏名》</p>
 						<dl>
 							<dt><span class="item">新郎様</span></dt>
@@ -62,6 +69,15 @@ $_SESSION['time2_return'] = $slc_time2;
 							<dd><p class="value"><?php echo $b_name; ?></p></dd>
 						</dl>
 					</div>
+					
+					<div class="unit">
+						<p class="label">《代表の方のご連絡先》</p>
+						<dl>
+							<dt><span class="item">メールアドレス</span></dt>
+							<dd><?php echo $email; ?></dd>
+						</dl>
+					</div>
+					
 					<div class="unit">
 						<p class="label must">《サイズ》</p>
 						<dl>
@@ -80,12 +96,6 @@ $_SESSION['time2_return'] = $slc_time2;
 								<p class="value">靴：<?php echo $b_shoe; ?></p>
 							</dd>
 						</dl>
-					</div>
-					
-					
-					<div class="unit">
-						<p class="label must">《ご来店希望店舗》</p>
-						<p class="value"><?php echo $radio_venue; ?></p>
 					</div>
 					
 					<div class="unit">

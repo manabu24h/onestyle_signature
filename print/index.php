@@ -71,7 +71,7 @@ $home = 'http://sign.onestyle.co.jp/';
 		</section><!-- // cons-01 END -->
 		
 		<section class="cons-sec cons-02">
-			<h3>【メイク・お衣装について】</h3>
+			<h3>【メイク・衣装について】</h3>
 			<section class="item">
 				<h4>メイク</h4>
 				<ol>
@@ -82,7 +82,7 @@ $home = 'http://sign.onestyle.co.jp/';
 				</ol>
 			</section>
 			<section class="item">
-				<h4>お衣装</h4>
+				<h4>衣装</h4>
 				<ol>
 					<li>ドレスによっては貸出等でご紹介できない場合もございます。</li>
 					<li>撮影の日程変更および順延の際、衣装の貸し出し中などの理由により衣装をご変更頂く可能性がございます。予めご了承ください。</li>

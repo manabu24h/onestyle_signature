@@ -18,7 +18,7 @@
 			<p class="b-txt">このたびはONESTYLEのフォトウェディングにお申込み頂きありがとうございます！<br class="sp-non" />今後の流れやお申込みの手続きについて、ご確認頂きますようお願い申し上げます。</p>
 			<div class="step-nav">
 				<span class="flow-current">① 撮影申込書のご提出</span>
-				<a href="<?php echo $home; ?>rsrv/">② お衣装のご予約</a>
+				<a href="<?php echo $home; ?>rsrv/">② 衣装のご予約</a>
 				<a class="flow-last" href="<?php echo $home; ?>payment">③ お支払いについて</a>
 			</div>
 		</section>
@@ -99,7 +99,7 @@
 				</section><!-- // cons-01 END -->
 				
 				<section class="cons-sec cons-02">
-					<h3>【メイク・お衣装について】</h3>
+					<h3>【メイク・衣装について】</h3>
 					<section class="item">
 						<h4>メイク</h4>
 						<ol>
@@ -110,7 +110,7 @@
 						</ol>
 					</section>
 					<section class="item">
-						<h4>お衣装</h4>
+						<h4>衣装</h4>
 						<ol>
 							<li>ドレスによっては貸出等でご紹介できない場合もございます。</li>
 							<li>撮影の日程変更および順延の際、衣装の貸し出し中などの理由により衣装をご変更頂く可能性がございます。予めご了承ください。</li>

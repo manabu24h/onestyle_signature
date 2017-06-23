@@ -5,17 +5,23 @@ $date='';
 $g_name='';
 $b_name='';
 $email='';
-$waso_1='';
-$waso_2='';
-$waso_3='';
+$radio_venue='';
+$slc_date1='';
+$slc_date2='';
+$slc_time1='';
+$slc_time2='';
+
 session_start();
+
 $date = $_SESSION['date'];
 $g_name = $_SESSION['g_name'];
 $b_name = $_SESSION['b_name'];
 $email = $_SESSION['email'];
-$waso_1 = $_SESSION['waso_1'];
-$waso_2 = $_SESSION['waso_2'];
-$waso_3 = $_SESSION['waso_3'];
+$radio_venue = $_SESSION['radio_venue'];
+$slc_date1= $_SESSION['slc_date1'];
+$slc_date2= $_SESSION['slc_date2'];
+$slc_time1= $_SESSION['slc_time1'];
+$slc_time2= $_SESSION['slc_time2'];
 
 session_destroy();
 
@@ -61,7 +67,7 @@ $mail -> to($to);
 // $mail -> bcc('wedding@onestyle.co.jp', '');
 
 // 件名をセット
-$mail ->subject('和装の衣装予約');
+$mail ->subject('和装の見学予約');
 
 // 送信元をセット
 $mail -> from('wedding@onestyle.co.jp','ONESTYLE');
@@ -78,7 +84,7 @@ $mail_body = <<<EOD
 内容確認後、ご連絡をさせていただきます。
 なお回答には、数日かかることがございますので、ご了承願います。
 
-■ご予約の内容：和装の衣装予約
+■ご予約の内容：和装の見学予約
 
 ■撮影日：{$date}
 
@@ -89,10 +95,12 @@ $mail_body = <<<EOD
 ■代表の方のご連絡先
 {$email}
 
-■ご予約希望の衣装（和装）
-第一希望：{$waso_1}
-第一希望：{$waso_2}
-第三希望：{$waso_3}
+■ご来店希望店舗
+{$radio_venue}
+
+■撮影希望日時
+第一希望：{$slc_date1}｜{$slc_time1}
+第二希望：{$slc_date2}｜{$slc_time2}
 
 --
 /・/・/・/・/・/・/・/・/・/・/・/・/・/・/・/・/・/・/
@@ -125,7 +133,7 @@ $mail_body = <<<EOD
 
 ==【お問い合わせ内容】=====================
 
-■ご予約の内容：和装の衣装予約
+■ご予約の内容：和装の見学予約
 
 ■撮影日：{$date}
 
@@ -136,10 +144,12 @@ $mail_body = <<<EOD
 ■代表の方のご連絡先
 {$email}
 
-■ご予約希望の衣装（和装）
-第一希望：{$waso_1}
-第一希望：{$waso_2}
-第三希望：{$waso_3}
+■ご来店希望店舗
+{$radio_venue}
+
+■撮影希望日時
+第一希望：{$slc_date1}｜{$slc_time1}
+第二希望：{$slc_date2}｜{$slc_time2}
 
 ===========================================
 

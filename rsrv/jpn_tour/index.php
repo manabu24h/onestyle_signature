@@ -1,4 +1,4 @@
-<?php // 洋装の試着予約フォーム
+<?php // 和装の見学予約フォーム
 	
 // 共通ヘッダー
 $Path = $_SERVER['DOCUMENT_ROOT'] . '/onestyle/signature/';
@@ -28,34 +28,34 @@ $date='';
 $g_name='';
 $b_name='';
 $email ='';
-$g_height='';
-$g_size='';
-$g_shoe='';
-$b_height='';
-$b_size='';
-$b_shoe='';
+$radio_venue='';
 $slc_date1='';
 $slc_date2='';
 $slc_time1='';
 $slc_time2='';
-$message='';
+// $message='';
 
 if( isset($_SESSION['date'])){ $date = $_SESSION['date']; }
-if( isset($_SESSION['email'])){ $email = $_SESSION['email']; }
 if( isset($_SESSION['g_name'])){ $g_name = $_SESSION['g_name']; }
-if( isset($_SESSION['g_height'])){ $g_height = $_SESSION['g_height']; }
-if( isset($_SESSION['g_size'])){ $g_size = $_SESSION['g_size']; }
-if( isset($_SESSION['g_shoe'])){ $g_shoe = $_SESSION['g_shoe']; }
 if( isset($_SESSION['b_name'])){ $b_name = $_SESSION['b_name']; }
-if( isset($_SESSION['b_height'])){ $b_height = $_SESSION['b_height']; }
-if( isset($_SESSION['b_size'])){ $b_size = $_SESSION['b_size']; }
-if( isset($_SESSION['b_shoe'])){ $b_shoe = $_SESSION['b_shoe']; }
-if( isset($_SESSION['message'])){ $message = $_SESSION['message']; }
+if( isset($_SESSION['email'])){ $email = $_SESSION['email']; }
+
+/* 確認画面から戻った時に、inputタグ内に「checked」を代入して複数選択を引き継ぐ。 */
+// radio_plan
+if( isset($_SESSION['radio_v_return'])){
+	if($_SESSION['radio_v_return'] == '表参道店'){
+	$p_chk1 = 'checked';
+	}
+	if($_SESSION['radio_v_return'] == '横浜店'){
+	$p_chk2 = 'checked';
+	}
+}else{
+}
 
 // check_dat
 ////// 時間リスト //////
 $time_list = array(
-''=>'--', '9時〜'=>'9時〜', '10時〜'=>'10時〜','11時〜'=>'11時〜', 
+''=>'--', '午前'=>'午前', '12～15時'=>'12～15時', '15～18時'=>'15～18時', 
 );
 
 ////// 撮影日時 入力内容 //////
@@ -108,7 +108,7 @@ $_POST['time2_return'] = $_SESSION['time2_return'];
 		<ul>
 			<li><h1><a href="<?php echo $home; ?>">ONESTYLE撮影お申込みのご案内</a><span class="arrow">＞</span></h1></li>
 			<li><a href="<?php echo $home; ?>rsrv">衣装のご予約</a><span class="arrow">＞</span></li>
-			<li><a href="">洋装の試着予約</a></li>
+			<li><a href="">和装の見学予約</a></li>
 		</ul>
 	</div>
 	<!-- // #breadcrumb END -->
@@ -124,9 +124,8 @@ $_POST['time2_return'] = $_SESSION['time2_return'];
 		<!-- // .intro END -->
 		
 		<section id="mail-form" name="mail-form">
-			<h2>洋装の試着予約</h2>
+			<h2>和装の見学予約</h2>
 			<div class="form-apply">
-		
 				<form id="apply" action="check.php" method="POST" >
 					<div class="unit">
 						<p class="label">《撮影日》</p>
@@ -156,24 +155,17 @@ $_POST['time2_return'] = $_SESSION['time2_return'];
 					</div>
 					
 					<div class="unit">
-						<p class="label">《サイズ》</p>
+						<p class="label must">《ご来店希望店舗》</p>
 						<dl>
-							<dt><span class="item">新郎様</span></dt>
 							<dd>
-								<span><input class="w40 validate[required]" type="text" name="g_height" value="<?php echo $g_height; ?>" size="6" id="g_height" aria-required="true" aria-invalid="false" placeholder="身長" /> cm</span>
-								<span><input class="w40 validate[required]" type="text" name="g_size" value="<?php echo $g_size; ?>" size="40" id="g_size" aria-required="true" aria-invalid="false" placeholder="服" /></span>
-								<span><input class="w40 validate[required]" type="text" name="g_shoe" value="<?php echo $g_shoe; ?>" size="40" id="g_shoe" aria-required="true" aria-invalid="false" placeholder="靴" /> cm</span>
+								<input type="radio" id="radio_vn1" name="radio_venue" value="表参道店" <?= $p_chk1 ?> />
+								<label for="radio_vn1" class="check_css">表参道店</label>
 							</dd>
-						</dl>
-						<dl>
-							<dt><span class="item">新婦様</span></dt>
 							<dd>
-								<span><input class="w40 validate[required]" type="text" name="b_height" value="<?php echo $b_height; ?>" size="6" id="b_height" aria-required="true" aria-invalid="false" placeholder="身長" /> cm</span>
-								<span><input class="w40 validate[required]" type="text" name="b_size" value="<?php echo $b_size; ?>" size="40" id="b_size" aria-required="true" aria-invalid="false" placeholder="服" /></span>
-								<span><input class="w40 validate[required]" type="text" name="b_shoe" value="<?php echo $b_shoe; ?>" size="40" id="b_shoe" aria-required="true" aria-invalid="false" placeholder="靴" /> cm</span>
-							
+								<input type="radio" id="radio_vn2" name="radio_venue" value="横浜店" <?= $p_chk2 ?> />
+								<label for="radio_vn2" class="check_css">横浜店</label>
 							</dd>
-						</dl>			
+						</dl>	
 					</div>
 					
 					<div id="u_date" class="unit">
@@ -236,20 +228,12 @@ $_POST['time2_return'] = $_SESSION['time2_return'];
 						</dl>
 						<p class="att">※見学予約については、第二希望まで必ずご入力ください。</p>
 					</div>
-					
-					<div class="unit">
-						<p class="label">《ご質問・ご要望》</p>
-						<dl>
-							<dd><textarea id="message" name="message" cols="40" rows="10" class="textarea" aria-invalid="false" placeholder="そのほか、ご希望やご相談がありましたらご記載ください。" ><?php echo $message; ?></textarea></dd>
-						</dl>	
-					</div>
 
 					<div class="submit-area clearfix">
 						<div class="submit">
 							<input id="submit" type="submit" value="確認画面へ進む" class="bt-submit" />
 						</div>
 					</div>
-					
 				</form>
 
 				

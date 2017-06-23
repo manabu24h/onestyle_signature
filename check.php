@@ -23,8 +23,6 @@
 		?>
 		
 		<!-- 入力した値が表示されます -->
-		<?php var_dump($_POST); ?>
-
 <!--
        <?php foreach ($_POST as $v) { ?>
 			<p><?php echo $v; ?></p>
