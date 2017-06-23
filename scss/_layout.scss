@@ -219,7 +219,7 @@ footer { width: 100%; max-width: 960px; box-sizing: border-box; padding: $bs*5 0
 			p { margin-bottom: $bs/2; line-height: 1.5;
 				&.tel { text-align: center; 
 					.label { font-size: fz(18); margin-right: $bs; vertical-align: baseline; font-weight: 600; }
-					.tel-link { font-size: fz(32); vertical-align: baseline; font-weight: 600;}
+					.tel-link { color: $font_color; font-size: fz(32); vertical-align: baseline; font-weight: 600;}
 				}	
 				&.addr { font-size: fz(12); margin-bottom: $bs*2; }
 				&.biz-info { font-size: fz(12); letter-spacing: .02em; font-weight: 600; }

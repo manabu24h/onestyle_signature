@@ -46,7 +46,7 @@ require_once( $Path . 'lib/qdmail.php');
 //（ドキュメントには、記述不要とかいてあるが、書かないとうまくいかないことがあった）
 require_once( $Path . 'lib/qdsmtp.php');
 
-$mail_send_list = [$email, "nishio@onelife.jp"];
+$mail_send_list = [$email, "wedding@onestyle.co.jp"];
 //$mail_send_list = [$params["email"], "wedding@onestyle.co.jp"];  // 本番公開用
 
 foreach ($mail_send_list as $key => $val) {

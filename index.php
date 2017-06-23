@@ -29,6 +29,13 @@
 			<p class="b-txt">撮影のお申込みにあたり、以下の申込書に署名・捺印を頂いて、5日以内にご提出ください。<br class="sp-non" />ご提出方法は以下の通りです。</p>
 			
 			<div class="g-pt">
+				<div class="label">フォームで送信</div>
+				<p>下記の撮影お申込みフォームで、お客様情報を入力して頂き、撮影のお申込みにあたる同意欄にチェックして送信してください。</p>
+				<a href="#apply" class="bt-type1 bt-mform">撮影お申込みフォーム</a>
+			</div>
+			<!-- // フォームで送信 END -->
+			
+			<div class="g-pt">
 				<div class="label">ご来店もしくは郵送でのご提出</div>
 				<p>
 					郵送先<br />
@@ -49,13 +56,6 @@
 				<a href="./file/application_guide.pdf" target="_blank" class="bt-type1">撮影申込書をダウンロード<br /><span class="mini">PDF（978kb）</span></a>
 			</div>
 			<!-- // FAXでの送信 END -->
-			
-			<div class="g-pt">
-				<div class="label">フォームで送信</div>
-				<p>下記の撮影お申込みフォームで、お客様情報を入力して頂き、撮影のお申込みにあたる同意欄にチェックして送信してください。</p>
-				<a href="#apply" class="bt-type1 bt-mform">撮影お申込みフォーム</a>
-			</div>
-			<!-- // フォームで送信 END -->
 		</section>
 		<!-- // .guide END -->
 		
