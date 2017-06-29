@@ -80,7 +80,7 @@ if (isset($_GET["id"]) && !empty($_GET["id"])) {
 					</li>
 					<li class="item">
 						<div class="thumb">
-							<a href="">
+							<a href="http://30d.jp/onestyle0916/191/photo/18" target="_blank">
 								<img src="<?php echo $img ; ?>thumb_pl_st_dr.png" alt="" />
 								<span class="bt-type1">洋装カタログ</span>
 							</a>
