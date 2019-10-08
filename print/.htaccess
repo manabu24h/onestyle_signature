@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Input your ID and Password."
+AuthUserFile /home/onestyle-photo/www/onestyle/signature/print/.htpasswd
+require valid-user

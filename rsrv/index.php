@@ -1,6 +1,6 @@
 <?php // 共通ヘッダー
 	
-$Path = $_SERVER['DOCUMENT_ROOT'] . '/onestyle/signature/';
+$Path = $_SERVER['DOCUMENT_ROOT'];
 include( $Path . 'header.php');
 
 require_once $Path ."lib/Database.php";
@@ -128,7 +128,7 @@ if (isset($_GET["id"]) && !empty($_GET["id"])) {
 				<ul class="clmn-1" style="padding-top: 32px;">
 					<li class="item clearfix">
 						<div class="thumb">
-							<a href="">
+							<a href="http://30d.jp/onestyle0916/191/photo/18" target="_blank">
 								<img src="<?php echo $img ; ?>thumb_pl_lc_dr.png" alt="" />
 								<span class="bt-type1">洋装カタログ</span>
 							</a>

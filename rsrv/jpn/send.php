@@ -1,5 +1,5 @@
 <?php // 和装の衣装予約フォーム
-$Path = $_SERVER['DOCUMENT_ROOT'] . '/onestyle/signature/';
+$Path = $_SERVER['DOCUMENT_ROOT'] ;
 
 $date='';
 $g_name='';

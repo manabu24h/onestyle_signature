@@ -1,6 +1,6 @@
 <?php // 和装の見学予約フォーム
 	// 共通ヘッダー
-	$Path = $_SERVER['DOCUMENT_ROOT'] . '/onestyle/signature/';
+	$Path = $_SERVER['DOCUMENT_ROOT'] ;
 	include( $Path . 'header.php');
 
 	//$_POST['name'] →$nameへ、$name= 値 といった具合で挿入されます

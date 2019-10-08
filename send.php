@@ -1,8 +1,8 @@
 <?php
 
 require_once "lib/Database.php";
-$Path = $_SERVER['DOCUMENT_ROOT'] . '/onestyle/signature/';
-//$Path = $_SERVER['DOCUMENT_ROOT'] . "/";
+//$Path = $_SERVER['DOCUMENT_ROOT'] . '/onestyle/signature/';
+$Path = $_SERVER['DOCUMENT_ROOT'] ;
 
 // 問い合わせ内容をDBに格納
 $db = Database::getConnection();
@@ -135,12 +135,12 @@ http://weddingphoto.onestyle.co.jp
 wedding@onestyle.co.jp
 
 ≪表参道店≫
-〒150-0001　東京都渋谷区神宮前3-38-1 JP-4ビル1階
-tel:03-6721-0592　fax:03-6721-0594
+〒150-0001 東京都渋谷区神宮前3-38-1 JP-4ビル1階
+tel:03-6721-0592
 
 ≪横浜店≫
-〒231-0011　神奈川県横浜市中区太田町6-75 関内北原不動産ビル603
-tel:045-306-7422　fax:045-306-7499
+〒220-0005 神奈川県横浜市西区南幸2-11-11 グランツ南幸5階
+tel:045-594-7684
 
 ↓新着情報を更新しておりますのでご覧下さい
 スタッフブログ：http://weddingphoto.onestyle.co.jp/blog

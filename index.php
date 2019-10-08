@@ -1,6 +1,6 @@
 <?php // 共通ヘッダー
-	$Path = $_SERVER['DOCUMENT_ROOT'] . '/onestyle/signature/';
-        //$Path = $_SERVER['DOCUMENT_ROOT'] . "/";
+	// $Path = $_SERVER['DOCUMENT_ROOT'] . '/onestyle/signature/';
+    $Path = $_SERVER['DOCUMENT_ROOT'] ;
 	include( $Path . 'header.php');
 ?>
 

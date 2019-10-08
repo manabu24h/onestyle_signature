@@ -1,7 +1,7 @@
 <?php // 1DAY完結プラン サイズ・衣装予約フォーム
 	
 // 共通ヘッダー
-$Path = $_SERVER['DOCUMENT_ROOT'] . '/onestyle/signature/';
+$Path = $_SERVER['DOCUMENT_ROOT'] ;
 include( $Path . 'header.php');
 
 require_once $Path ."lib/Database.php";

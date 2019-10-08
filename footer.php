@@ -37,9 +37,9 @@
 			<p class="tel">
 				<span class="label">tel.</span>
 				<?php if ( $detect->isMobile() ) : ?>
-					<a class="tel-link" href="tel:0453067422" onclick="ga('send','event','電話リンク','タップ','横浜店');">045-306-7422</a>
+					<a class="tel-link" href="tel:0455947684" onclick="ga('send','event','電話リンク','タップ','横浜店');">045-594-7684</a>
 				<?php else : ?>
-					<span class="tel-link">045-306-7422</span>
+					<span class="tel-link">045-594-7684</span>
 				<?php endif; ?>
 			</p>
 			<p class="biz-info">
@@ -47,8 +47,8 @@
 				<span class="date">【定休日】火曜（年末年始）</span>
 			</p>
 			<p class="addr">
-				<span class="zip-code">〒231-0011</span>
-				<span class="jpn">神奈川県横浜市中区太田町6-75 <br />関内北原不動産ビル603</span>
+				<span class="zip-code">〒220-0005</span>
+				<span class="jpn">神奈川県横浜市西区南幸2-11-11<br />グランツ南幸5階</span>
 			</p>
 		</section><!-- // 横浜店 END -->
 	</div>

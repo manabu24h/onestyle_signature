@@ -1,5 +1,5 @@
 <?php
-$Path = $_SERVER['DOCUMENT_ROOT'] . '/onestyle/signature/';
+$Path = $_SERVER['DOCUMENT_ROOT'] ;
 require_once $Path ."lib/Database.php";
 $db = Database::getConnection();
 if (isset($_GET["id"]) && !empty($_GET["id"])) {
