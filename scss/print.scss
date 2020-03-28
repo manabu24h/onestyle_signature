@@ -55,5 +55,36 @@ body { width: 172mm !important; height: 251mm !important; margin: 0 auto; letter
 			}
 		}
 	}
+
+/// 非常時の特則
+	&.emergency { font-size: .75rem; padding: 24px 0 0;
+		p { line-height: 1.6 !important; }
+		h2 { text-align: center; font-size: 1rem; font-weight: 600; margin-bottom: $bs*2; letter-spacing: 0.2em; }
+		.u-line { text-decoration: underline; }
+		.b-txt { text-align: left; width: 100%; max-width: 780px; margin: 0 auto 24px; }
+		.handling { text-align: left;  border: 1px solid $font_color; padding: 12px; margin-bottom: 24px;
+			.note { margin-bottom: 12px;}
+			ol { padding-left: 24px; counter-reset: li_count;
+				li { list-style: none; line-height: 1.8; position: relative; margin-bottom: 10px;
+					&::before  { position: absolute; left: -24px; counter-increment: li_count; content: "("counter(li_count)")"; }
+				}
+			}
+		}
+		.consent { font-size: .75rem; text-align: left; width: 100%; max-width: 780px; margin: 0 auto 24px;
+			.item { margin-bottom: 12px;
+				ol { padding-left: 16px;
+					li { list-style: none; line-height: 1.8; position: relative; margin-bottom: 4px;
+						&::before  { position: absolute; left: -16px;  content: "・"; }
+					}
+				}
+				p { margin-bottom: 12px; }
+			}
+			.generosity { text-align: right; line-height: 1.4; padding: 16px 4px 0; }
+		} // .consent END
+		.apply { padding: $bs 0 0; font-size: .8rem; 
+			h3 { text-align: left; font-size: .92rem; font-weight: 600; margin-bottom:12px; padding-bottom: 8px; border-bottom: 1px solid $font_color; }
+		}
+	}
+	
 }
 

@@ -23,6 +23,7 @@ foreach ($_SESSION["data"] as $key => $val) {
         $insert .= '"' . $val . '",';
     }
 }
+date_default_timezone_set('Asia/Tokyo');
 $insert .= '"' . date("Y-m-d H:i:s") . '")';
 
 try {

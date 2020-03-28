@@ -19,7 +19,7 @@ body {
   -webkit-text-size-adjust: 100%; }
 
 /* html5doctor.com Reset Stylesheet v1.6.1
-Last Updated: 2010-09-17 Author: Richard Clark - http://richclarkdesign.com Twitter: @rich_clark */
+	Last Updated: 2010-09-17 Author: Richard Clark - http://richclarkdesign.com Twitter: @rich_clark */
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -519,6 +519,59 @@ body {
             color: #fff;
             text-decoration: none;
             background: rgba(54, 54, 54, 0.8); }
+  #contents #mail-form.emergency {
+    font-size: .8rem; }
+    #contents #mail-form.emergency .u-line {
+      text-decoration: underline; }
+    #contents #mail-form.emergency .b-txt {
+      text-align: left;
+      width: 100%;
+      max-width: 780px;
+      margin: 0 auto 24px; }
+    #contents #mail-form.emergency .handling {
+      text-align: left;
+      border: 1px solid #363636;
+      padding: 12px;
+      margin-bottom: 24px; }
+      #contents #mail-form.emergency .handling .note {
+        margin-bottom: 12px; }
+      #contents #mail-form.emergency .handling ol {
+        padding-left: 24px;
+        counter-reset: li_count; }
+        #contents #mail-form.emergency .handling ol li {
+          list-style: none;
+          line-height: 1.8;
+          position: relative;
+          margin-bottom: 12px; }
+          #contents #mail-form.emergency .handling ol li::before {
+            position: absolute;
+            left: -24px;
+            counter-increment: li_count;
+            content: "(" counter(li_count) ")"; }
+    #contents #mail-form.emergency .consent {
+      text-align: left;
+      width: 100%;
+      max-width: 780px;
+      margin: 0 auto 24px; }
+      #contents #mail-form.emergency .consent .item {
+        margin-bottom: 12px; }
+        #contents #mail-form.emergency .consent .item ol {
+          padding-left: 16px; }
+          #contents #mail-form.emergency .consent .item ol li {
+            list-style: none;
+            line-height: 1.8;
+            position: relative;
+            margin-bottom: 4px; }
+            #contents #mail-form.emergency .consent .item ol li::before {
+              position: absolute;
+              left: -16px;
+              content: "・"; }
+        #contents #mail-form.emergency .consent .item p {
+          margin-bottom: 12px; }
+      #contents #mail-form.emergency .consent .generosity {
+        text-align: right;
+        line-height: 1.8;
+        padding: 32px 8px; }
   #contents .plan {
     text-align: center;
     width: 100%;
@@ -638,7 +691,7 @@ footer {
     margin-bottom: 24px; }
     footer .access-info .studio {
       display: inline-block;
-      margin: 0 40px;
+      margin: 0 8px 16px;
       text-align: left; }
       footer .access-info .studio h2 {
         text-align: center;
@@ -682,14 +735,11 @@ footer {
   .sp-non {
     display: none;
     visibility: hidden; }
-
   .sp-on {
     display: block;
     visibility: visible; }
-
   p {
     text-align: justify; }
-
   #contents .plan .p-nav {
     margin-bottom: 40px; }
     #contents .plan .p-nav a.bt-type1 {
@@ -759,7 +809,6 @@ footer {
           box-sizing: border-box; }
     #contents .plan .pl-unit a.bt-type1 {
       margin: 0 16px 16px; }
-
   form, .check-form {
     text-align: left;
     width: 100%;
@@ -771,10 +820,8 @@ footer {
       width: 100% !important; }
     form dl dd, .check-form dl dd {
       width: 100% !important; }
-
   a.tel-link {
     color: #363636; }
-
   footer .step-nav {
     padding: 12px 24px 24px;
     box-sizing: border-box; }
@@ -793,5 +840,3 @@ footer {
     footer .step-nav a:hover {
       color: #fff;
       background: #5e5e5e; } }
-
-/*# sourceMappingURL=style.css.map */

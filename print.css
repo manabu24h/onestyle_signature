@@ -19,7 +19,7 @@ body {
   -webkit-text-size-adjust: 100%; }
 
 /* html5doctor.com Reset Stylesheet v1.6.1
-Last Updated: 2010-09-17 Author: Richard Clark - http://richclarkdesign.com Twitter: @rich_clark */
+	Last Updated: 2010-09-17 Author: Richard Clark - http://richclarkdesign.com Twitter: @rich_clark */
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -199,5 +199,76 @@ body {
       #container .apply dl dd:last-child {
         border-bottom: none;
         margin-bottom: 0; }
-
-/*# sourceMappingURL=print.css.map */
+  #container.emergency {
+    font-size: .75rem;
+    padding: 24px 0 0; }
+    #container.emergency p {
+      line-height: 1.6 !important; }
+    #container.emergency h2 {
+      text-align: center;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+      letter-spacing: 0.2em; }
+    #container.emergency .u-line {
+      text-decoration: underline; }
+    #container.emergency .b-txt {
+      text-align: left;
+      width: 100%;
+      max-width: 780px;
+      margin: 0 auto 24px; }
+    #container.emergency .handling {
+      text-align: left;
+      border: 1px solid #363636;
+      padding: 12px;
+      margin-bottom: 24px; }
+      #container.emergency .handling .note {
+        margin-bottom: 12px; }
+      #container.emergency .handling ol {
+        padding-left: 24px;
+        counter-reset: li_count; }
+        #container.emergency .handling ol li {
+          list-style: none;
+          line-height: 1.8;
+          position: relative;
+          margin-bottom: 10px; }
+          #container.emergency .handling ol li::before {
+            position: absolute;
+            left: -24px;
+            counter-increment: li_count;
+            content: "(" counter(li_count) ")"; }
+    #container.emergency .consent {
+      font-size: .75rem;
+      text-align: left;
+      width: 100%;
+      max-width: 780px;
+      margin: 0 auto 24px; }
+      #container.emergency .consent .item {
+        margin-bottom: 12px; }
+        #container.emergency .consent .item ol {
+          padding-left: 16px; }
+          #container.emergency .consent .item ol li {
+            list-style: none;
+            line-height: 1.8;
+            position: relative;
+            margin-bottom: 4px; }
+            #container.emergency .consent .item ol li::before {
+              position: absolute;
+              left: -16px;
+              content: "・"; }
+        #container.emergency .consent .item p {
+          margin-bottom: 12px; }
+      #container.emergency .consent .generosity {
+        text-align: right;
+        line-height: 1.4;
+        padding: 16px 4px 0; }
+    #container.emergency .apply {
+      padding: 8px 0 0;
+      font-size: .8rem; }
+      #container.emergency .apply h3 {
+        text-align: left;
+        font-size: .92rem;
+        font-weight: 600;
+        margin-bottom: 12px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #363636; }

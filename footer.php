@@ -23,7 +23,7 @@
 				<?php endif; ?>
 			</p>
 			<p class="biz-info">
-				<span class="hour">【営業時間】平日12:00〜19:00 土日祝10:00〜19:00</span><br />
+				<span class="hour">【営業時間】平日12:00-19:00 土日祝10:00-19:00</span><br />
 				<span class="date">【定休日】火曜（年末年始）</span>
 			</p>
 			<p class="addr">
@@ -43,12 +43,32 @@
 				<?php endif; ?>
 			</p>
 			<p class="biz-info">
-				<span class="hour">【営業時間】平日12:00〜19:00 土日祝10:00〜19:00</span><br />
+				<span class="hour">【営業時間】平日12:00-19:00 土日祝10:00-19:00</span><br />
 				<span class="date">【定休日】火曜（年末年始）</span>
 			</p>
 			<p class="addr">
 				<span class="zip-code">〒220-0005</span>
 				<span class="jpn">神奈川県横浜市西区南幸2-11-11<br />グランツ南幸5階</span>
+			</p>
+		</section><!-- // 横浜店 END -->
+		
+		<section class="studio std-01">
+			<h2><span class="jpn">仙台店</span><br /><span class="eng">SENDAI</span></h2>
+			<p class="tel">
+				<span class="label">tel.</span>
+				<?php if ( $detect->isMobile() ) : ?>
+					<a class="tel-link" href="tel:0223977481" onclick="ga('send','event','電話リンク','タップ','横浜店');">045-594-7684</a>
+				<?php else : ?>
+					<span class="tel-link">022-397-7481</span>
+				<?php endif; ?>
+			</p>
+			<p class="biz-info">
+				<span class="hour">【営業時間】平日12:00-19:00 土日祝10:00-19:00</span><br />
+				<span class="date">【定休日】火・水曜（年末年始）</span>
+			</p>
+			<p class="addr">
+				<span class="zip-code">〒980-0803</span>
+				<span class="jpn">宮城県仙台市青葉区国分町3-2-5<br />ゼロキュービル5階</span>
 			</p>
 		</section><!-- // 横浜店 END -->
 	</div>
