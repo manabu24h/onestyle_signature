@@ -21,6 +21,9 @@
 				<a href="<?php echo $home; ?>rsrv/">② 衣装のご予約</a>
 				<a class="flow-last" href="<?php echo $home; ?>payment">③ お支払いについて</a>
 			</div>
+			<div class="urgent">
+				<a href="<?php echo $home; ?>sp-rules/">新型コロナウイルスに関する特則</a>
+			</div>
 		</section>
 		<!-- // .intro END -->
 		
@@ -307,7 +310,7 @@
 					
 					<div class="submit-area clearfix">
 						<p class="att">
-							・個人情報は弊社の<a href="http://onelife.jp/policy">プライバシーポリシー</a>に則り管理いたします。<br />
+							・個人情報は弊社の<a href="https://weddingphoto.onestyle.co.jp/privacy" target="_blank">プライバシーポリシー</a>に則り管理いたします。<br />
 							・迷惑メール防止の設定をされている場合は、「@onestyle.co.jp」をドメイン指定解除してください。
 						</p>
 						<div class="submit">

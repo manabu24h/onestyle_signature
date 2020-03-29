@@ -50,6 +50,9 @@ header { }
 				&:hover { color: #fff; background: $sub_color; }
 			}
 		}
+		.urgent { padding: 24px 0;
+			a { display: inline-block; font-size: .8rem; color: #fff; background: #AF0000; border: 1px solid #AF0000; padding: 8px 24px; }
+		}
 	} // intro END
 	.guide { width: 100%; max-width: 780px; padding-bottom: $bs*5; border-bottom: 1px solid $font_color; margin: 0 auto $bs*12; 
 		h2 { font-size: fz(20); font-weight: 500; margin-bottom: $bs*3; }

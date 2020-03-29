@@ -113,6 +113,10 @@ tel:03-6721-0592　fax:03-6721-0594
 〒231-0011　神奈川県横浜市中区太田町6-75 関内北原不動産ビル603
 tel:045-306-7422　fax:045-306-7499
 
+≪仙台店≫
+〒980-0803 宮城県仙台市青葉区国分町3-2-5 ゼロキュービル5階
+tel:022-397-7481
+
 ↓新着情報を更新しておりますのでご覧下さい
 スタッフブログ：http://weddingphoto.onestyle.co.jp/blog
 Facebook：https://www.facebook.com/WEDDINGPHOTO.ONESTYLE

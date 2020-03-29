@@ -49,6 +49,9 @@ if( isset($_SESSION['radio_v_return'])){
 	if($_SESSION['radio_v_return'] == '横浜店'){
 	$p_chk2 = 'checked';
 	}
+	if($_SESSION['radio_v_return'] == '仙台店'){
+	$p_chk3 = 'checked';
+	}
 }else{
 }
 
@@ -164,6 +167,10 @@ $_POST['time2_return'] = $_SESSION['time2_return'];
 							<dd>
 								<input type="radio" id="radio_vn2" name="radio_venue" value="横浜店" <?= $p_chk2 ?> />
 								<label for="radio_vn2" class="check_css">横浜店</label>
+							</dd>
+							<dd>
+								<input type="radio" id="radio_vn3" name="radio_venue" value="仙台店" <?= $p_chk3 ?> />
+								<label for="radio_vn3" class="check_css">仙台店</label>
 							</dd>
 						</dl>	
 					</div>

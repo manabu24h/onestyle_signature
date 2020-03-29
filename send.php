@@ -143,6 +143,10 @@ tel:03-6721-0592
 〒220-0005 神奈川県横浜市西区南幸2-11-11 グランツ南幸5階
 tel:045-594-7684
 
+≪仙台店≫
+〒980-0803 宮城県仙台市青葉区国分町3-2-5 ゼロキュービル5階
+tel:022-397-7481
+
 ↓新着情報を更新しておりますのでご覧下さい
 スタッフブログ：http://weddingphoto.onestyle.co.jp/blog
 Facebook：https://www.facebook.com/WEDDINGPHOTO.ONESTYLE

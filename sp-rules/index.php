@@ -16,14 +16,12 @@ include( $Path . 'header.php');
 
 	<div id="contents">
 
-<!--
 		<?php $id = $_GET['id']; if($id): ?>
 			<section class="success">
-				<h2>撮影のお申込みメールの送信が完了いたしました。</h2>
-				<p class="note">お申込みいただいた撮影プランをお選びいただき、衣装のご予約をお願いいたします。</p>
+				<h2>「非常時の特則」同意メールの送信が完了いたしました。</h2>
+				<p class="note">この度は、弊社の「非常時の特則」にご同意を賜り、誠にありがとうございました。</p>
 			</section>
 		<?php endif; ?>
--->
 		
 		<section id="mail-form" name="mail-form" class="emergency ">
 			<h2>非常時の特則</h2>
@@ -134,7 +132,7 @@ include( $Path . 'header.php');
 					
 					<div class="submit-area clearfix">
 						<p class="att">
-							・個人情報は弊社の<a href="http://onelife.jp/policy">プライバシーポリシー</a>に則り管理いたします。<br />
+							・個人情報は弊社の<a href="https://weddingphoto.onestyle.co.jp/privacy" target="_blank">プライバシーポリシー</a>に則り管理いたします。<br />
 							・迷惑メール防止の設定をされている場合は、「@onestyle.co.jp」をドメイン指定解除してください。
 						</p>
 						<div class="submit">

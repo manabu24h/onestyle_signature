@@ -16,7 +16,7 @@ if (isset($_GET["id"]) && !empty($_GET["id"])) {
     exit;
 }
 
-$home = 'http://sign.onestyle.co.jp/';
+$home = 'https://sign.onestyle.co.jp/';
 ?>
 
 <!DOCTYPE html>
@@ -26,6 +26,7 @@ $home = 'http://sign.onestyle.co.jp/';
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="format-detection" content="telephone=no">
+<meta name="robots" content="noindex,nofollow">
 <title>撮影お申込み書</title>
 <link rel="stylesheet" type="text/css" media="all" href="<?php echo $home; ?>print.css" />
 </head>

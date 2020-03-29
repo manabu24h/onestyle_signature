@@ -5,7 +5,7 @@ Description:  ONESTYLE撮影のお申込み案内
 Author: NISHIO KIKAKU
 */
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600|Poppins:300");
-@import url("http://fonts.googleapis.com/earlyaccess/notosansjapanese.css");
+@import url("https://fonts.googleapis.com/earlyaccess/notosansjapanese.css");
 /* Reset Style */
 html {
   overflow-y: scroll;
@@ -239,6 +239,15 @@ body {
       #contents .intro .step-nav a:hover {
         color: #fff;
         background: #5e5e5e; }
+    #contents .intro .urgent {
+      padding: 24px 0; }
+      #contents .intro .urgent a {
+        display: inline-block;
+        font-size: .8rem;
+        color: #fff;
+        background: #AF0000;
+        border: 1px solid #AF0000;
+        padding: 8px 24px; }
   #contents .guide {
     width: 100%;
     max-width: 780px;
