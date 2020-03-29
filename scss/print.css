@@ -1,0 +1,274 @@
+@charset "UTF-8";
+/*
+Theme Name: ONESTYLE Original
+Description:  ONESTYLE撮影のお申込み書
+Author: NISHIO KIKAKU
+*/
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600|Poppins:300");
+@import url("https://fonts.googleapis.com/earlyaccess/notosansjapanese.css");
+/* Reset Style */
+html {
+  overflow-y: scroll;
+  width: 100%;
+  height: 100%; }
+
+body {
+  width: 100%;
+  height: 100%;
+  line-height: 1;
+  -webkit-text-size-adjust: 100%; }
+
+/* html5doctor.com Reset Stylesheet v1.6.1
+	Last Updated: 2010-09-17 Author: Richard Clark - http://richclarkdesign.com Twitter: @rich_clark */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: top;
+  background: transparent;
+  font-weight: 300; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+dl, dt, dd, ol, ul, li {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none; }
+
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+/* YUI 3.4.1 (build 4118) Copyright 2011 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License. http://yuilibrary.com/license/ */
+body {
+  font: 13px/1.231 arial,helvetica,clean,sans-serif;
+  *font-size: small;
+  *font: x-small; }
+
+select, input, button, textarea {
+  font: 99% arial,helvetica,clean,sans-serif; }
+
+table {
+  font-size: inherit;
+  font: 100%; }
+
+pre, code, kbd, samp, tt {
+  font-family: monospace;
+  *font-size: 108%;
+  line-height: 100%; }
+
+.clearfix {
+  *zoom: 1; }
+  .clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden; }
+
+.hidden-print {
+  display: none; }
+
+html {
+  height: 100%;
+  color: #363636; }
+
+body {
+  width: 172mm !important;
+  height: 251mm !important;
+  margin: 0 auto;
+  letter-spacing: .02em;
+  line-height: 1;
+  background: #fff;
+  font-family: 'Noto Sans Japanese', sans-serif; }
+
+#container {
+  width: 100%;
+  padding: 8px 0 0; }
+  #container h2 {
+    text-align: center;
+    font-size: 77%;
+    font-weight: 600;
+    margin-bottom: 16px;
+    letter-spacing: 0.2em; }
+  #container .consent {
+    font-size: 77%; }
+    #container .consent .cons-sec {
+      margin-bottom: 14px; }
+    #container .consent h3 {
+      font-weight: 600;
+      margin-bottom: 8px;
+      letter-spacing: 0.2em; }
+    #container .consent .item {
+      margin-bottom: 8px; }
+      #container .consent .item h4 {
+        font-weight: 600;
+        margin-bottom: 4px;
+        letter-spacing: 0.06em; }
+      #container .consent .item p {
+        line-height: 1.02; }
+      #container .consent .item ol {
+        line-height: 1.02;
+        padding-left: 8px; }
+        #container .consent .item ol li {
+          margin-bottom: 2px; }
+      #container .consent .item .cxl-fee {
+        padding: 4px 0 0 16px;
+        line-height: 1.02; }
+        #container .consent .item .cxl-fee span.fee {
+          padding-left: 12px;
+          font-weight: 600;
+          vertical-align: baseline; }
+  #container .apply {
+    padding: 8px 0 0;
+    font-size: 85%; }
+    #container .apply p {
+      line-height: 1;
+      letter-spacing: 0.06em;
+      display: inline-block;
+      padding-bottom: 8px; }
+      #container .apply p.note {
+        font-weight: 600;
+        margin-bottom: 8px; }
+      #container .apply p .val {
+        display: inline-block;
+        font-weight: 600;
+        padding-right: 32px; }
+    #container .apply dl dd {
+      border-bottom: 1px solid #363636;
+      margin-bottom: 12px; }
+      #container .apply dl dd:last-child {
+        border-bottom: none;
+        margin-bottom: 0; }
+  #container.emergency {
+    font-size: .75rem;
+    padding: 24px 0 0; }
+    #container.emergency p {
+      line-height: 1.6 !important; }
+    #container.emergency h2 {
+      text-align: center;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+      letter-spacing: 0.2em; }
+    #container.emergency .u-line {
+      text-decoration: underline; }
+    #container.emergency .b-txt {
+      text-align: left;
+      width: 100%;
+      max-width: 780px;
+      margin: 0 auto 24px; }
+    #container.emergency .handling {
+      text-align: left;
+      border: 1px solid #363636;
+      padding: 12px;
+      margin-bottom: 24px; }
+      #container.emergency .handling .note {
+        margin-bottom: 12px; }
+      #container.emergency .handling ol {
+        padding-left: 24px;
+        counter-reset: li_count; }
+        #container.emergency .handling ol li {
+          list-style: none;
+          line-height: 1.8;
+          position: relative;
+          margin-bottom: 10px; }
+          #container.emergency .handling ol li::before {
+            position: absolute;
+            left: -24px;
+            counter-increment: li_count;
+            content: "(" counter(li_count) ")"; }
+    #container.emergency .consent {
+      font-size: .75rem;
+      text-align: left;
+      width: 100%;
+      max-width: 780px;
+      margin: 0 auto 24px; }
+      #container.emergency .consent .item {
+        margin-bottom: 12px; }
+        #container.emergency .consent .item ol {
+          padding-left: 16px; }
+          #container.emergency .consent .item ol li {
+            list-style: none;
+            line-height: 1.8;
+            position: relative;
+            margin-bottom: 4px; }
+            #container.emergency .consent .item ol li::before {
+              position: absolute;
+              left: -16px;
+              content: "・"; }
+        #container.emergency .consent .item p {
+          margin-bottom: 12px; }
+      #container.emergency .consent .generosity {
+        text-align: right;
+        line-height: 1.4;
+        padding: 16px 4px 0; }
+    #container.emergency .apply {
+      padding: 8px 0 0;
+      font-size: .8rem; }
+      #container.emergency .apply h3 {
+        text-align: left;
+        font-size: .92rem;
+        font-weight: 600;
+        margin-bottom: 12px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #363636; }

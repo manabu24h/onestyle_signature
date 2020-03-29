@@ -631,7 +631,10 @@ body {
             #contents .plan .pl-unit ul .item .thumb img {
               width: 100%;
               height: auto; }
-            #contents .plan .pl-unit ul .item .thumb .bt-type1 {
+            #contents .plan .pl-unit ul .item .thumb .label {
+              color: #fff;
+              font-size: 108%;
+              padding: 8px 12px;
               position: absolute;
               left: 50%;
               bottom: 16px;
@@ -639,7 +642,27 @@ body {
               background: rgba(54, 54, 54, 0.75);
               margin-bottom: 0; }
           #contents .plan .pl-unit ul .item .detail {
-            text-align: justify; }
+            text-align: justify;
+            margin-bottom: 16px; }
+          #contents .plan .pl-unit ul .item .bt-catalog {
+            text-align: center;
+            display: block;
+            position: relative;
+            font-size: .75rem;
+            border: 2px solid #363636;
+            padding: 8px 12px;
+            margin-bottom: 12px;
+            background: #fff;
+            color: #363636; }
+            #contents .plan .pl-unit ul .item .bt-catalog .mini {
+              font-size: 85%; }
+            #contents .plan .pl-unit ul .item .bt-catalog:hover {
+              color: #fff;
+              background: #5e5e5e; }
+          #contents .plan .pl-unit ul .item .parallel {
+            text-align: left; }
+            #contents .plan .pl-unit ul .item .parallel .bt-catalog {
+              display: inline-block; }
         #contents .plan .pl-unit ul.clmn-1 .item {
           display: inline-block;
           width: 100%;
@@ -797,6 +820,10 @@ footer {
             margin-bottom: 0; }
         #contents .plan .pl-unit ul .item .detail {
           text-align: justify; }
+        #contents .plan .pl-unit ul .item .parallel {
+          text-align: center; }
+          #contents .plan .pl-unit ul .item .parallel .bt-catalog {
+            display: block; }
       #contents .plan .pl-unit ul.clmn-1 .item {
         display: inline-block;
         width: 100%;

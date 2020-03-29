@@ -1,4 +1,6 @@
 <?php
+session_start();
+/* session_start()の書く位置は<?phpの直下 */
 
 require_once "lib/Database.php";
 //$Path = $_SERVER['DOCUMENT_ROOT'] . '/onestyle/signature/';
@@ -6,7 +8,7 @@ $Path = $_SERVER['DOCUMENT_ROOT'] ;
 
 // 問い合わせ内容をDBに格納
 $db = Database::getConnection();
-session_start();
+
 if (!isset($_SESSION["data"])) {
     header('Location: index.php');
     exit;

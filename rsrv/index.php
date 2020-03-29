@@ -72,21 +72,23 @@ if (isset($_GET["id"]) && !empty($_GET["id"])) {
 				<ul>
 					<li class="item">
 						<div class="thumb">
-							<a href="">
-								<img src="<?php echo $img ; ?>thumb_pl_st_wa.png" alt="" />
-								<span class="bt-type1">和装カタログ</span>
-							</a>
+							<img src="<?php echo $img ; ?>thumb_pl_st_wa.png" alt="" />
+							<span class="label">和装カタログ</span>
 						</div>
 						<p class="detail">和装については、以下の和装カタログからセレクトして頂きます。セレクトして頂く衣装によって、追加料金が発生するものがございますのでご注意くださいませ。<br />なお、他店舗の衣装をセレクトされた場合、お取り寄せ料金が別途1万円発生致します。</p>
+						<a href="https://30d.jp/onestyle0916/969" target="_blank" class="bt-catalog">表参道店 和装カタログ</a>
+						<a href="https://30d.jp/onestyle0916/970" target="_blank" class="bt-catalog">横浜店 和装カタログ</a>
+						<a href="https://30d.jp/onestyle0916/1086" target="_blank" class="bt-catalog">仙台店 和装カタログ</a>
 					</li>
 					<li class="item">
 						<div class="thumb">
-							<a href="http://30d.jp/onestyle0916/191/photo/18" target="_blank">
-								<img src="<?php echo $img ; ?>thumb_pl_st_dr.png" alt="" />
-								<span class="bt-type1">洋装カタログ</span>
-							</a>
+							<img src="<?php echo $img ; ?>thumb_pl_st_dr.png" alt="" />
+							<span class="label">洋装カタログ</span>
 						</div>
 						<p class="detail">洋装については、当日約1時間のお時間で、ご試着のうえご決定頂きます。セレクトして頂く衣装によって、追加料金が発生するものがございますのでご注意くださいませ。<br />事前に以下のカタログをご覧頂き、1点のみでしたらお取り置きしておくことも可能です。<br />（当日、衣装のご変更を頂いてもかまいません）</p>
+						<a href="https://30d.jp/onestyle0916/963" target="_blank" class="bt-catalog">表参道店 洋装カタログ</a>
+						<a href="https://30d.jp/onestyle0916/965" target="_blank" class="bt-catalog">横浜店 洋装カタログ</a>
+						<a href="https://30d.jp/onestyle0916/1100" target="_blank" class="bt-catalog">仙台店 洋装カタログ</a>
 					</li>
 				</ul>
 				<?php $id = $_GET['id']; if($id): ?>
@@ -103,12 +105,15 @@ if (isset($_GET["id"]) && !empty($_GET["id"])) {
 				<ul class="clmn-1">
 					<li class="item clearfix">
 						<div class="thumb">
-							<a href="">
-								<img src="<?php echo $img ; ?>thumb_pl_lc_wa.png" alt="" />
-								<span class="bt-type1">和装カタログ</span>
-							</a>
+							<img src="<?php echo $img ; ?>thumb_pl_lc_wa.png" alt="" />
+							<span class="label">和装カタログ</span>
 						</div>
 						<p class="detail"><span class="label">和装は、和装カタログからセレクトして頂きます。</span><br />セレクトして頂く衣装によって、追加料金が発生するものがございますので、ご注意くださいませ。<br />他店舗の衣装でもお取り寄せ可能です。（お取り寄せ料金1万円）<br />なお、それぞれの店舗の衣装を実際にご覧になりたい場合、お袖を通すなどをお試しになりたい場合は平日のみ、ご予約をもって対応させて頂いております。（予約がない場合はご案内できません）</p>
+						<div class="parallel">
+							<a href="https://30d.jp/onestyle0916/969" target="_blank" class="bt-catalog">表参道店 和装カタログ</a>
+							<a href="https://30d.jp/onestyle0916/970" target="_blank" class="bt-catalog">横浜店 和装カタログ</a>
+							<a href="https://30d.jp/onestyle0916/1086" target="_blank" class="bt-catalog">仙台店 和装カタログ</a>
+						</div>
 					</li>
 				</ul>
 				
@@ -129,12 +134,15 @@ if (isset($_GET["id"]) && !empty($_GET["id"])) {
 				<ul class="clmn-1" style="padding-top: 32px;">
 					<li class="item clearfix">
 						<div class="thumb">
-							<a href="http://30d.jp/onestyle0916/191/photo/18" target="_blank">
-								<img src="<?php echo $img ; ?>thumb_pl_lc_dr.png" alt="" />
-								<span class="bt-type1">洋装カタログ</span>
-							</a>
+							<img src="<?php echo $img ; ?>thumb_pl_lc_dr.png" alt="" />
+							<span class="label">洋装カタログ</span>
 						</div>
 						<p class="detail"><span class="label">洋装については、事前のご試着を行って頂いております。</span><br /><span class="cl-f00">※事前のご試着のご案内ができない店舗がございます。</span><br />セレクトして頂く衣装によって、追加料金が発生するものがございますので、ご注意くださいませ。事前のご来店が難しい場合には、撮影日当日のご試着も可能でございます。ただし、サイズ感が合わないなどの理由で撮影キャンセルを承ることはできません。原則、事前のご試着をお願いしております。</p>
+						<div class="parallel">
+							<a href="https://30d.jp/onestyle0916/963" target="_blank" class="bt-catalog">表参道店 洋装カタログ</a>
+							<a href="https://30d.jp/onestyle0916/965" target="_blank" class="bt-catalog">横浜店 洋装カタログ</a>
+							<a href="https://30d.jp/onestyle0916/1100" target="_blank" class="bt-catalog">仙台店 洋装カタログ</a>
+						</div>
 					</li>
 				</ul>
 				

@@ -204,16 +204,22 @@ header { }
 							&:hover { opacity: 0.9; }
 						}
 						img { width: 100%; height: auto; }
-						.bt-type1 { position: absolute; left: 50%; bottom: 16px; transform: translateX( -50%); background: rgba($font_color,0.75); margin-bottom: 0; }
+						.label { color: #fff; font-size: fz(14); padding: $bs $bs*1.5; position: absolute; left: 50%; bottom: 16px; transform: translateX( -50%); background: rgba($font_color,0.75); margin-bottom: 0; }
 					}
-					.detail { text-align: justify; }
+					.detail { text-align: justify; margin-bottom: 16px; }
+					.bt-catalog { text-align: center; display: block; position: relative; font-size: .75rem; border: 2px solid $font_color; padding: $bs $bs*1.5; margin-bottom: 12px; background: #fff; color: $font_color;
+						.mini { font-size: fz(11); }
+						&:hover { color: #fff; background: $sub_color; }
+					}
+					.parallel { text-align: left;
+						.bt-catalog { display: inline-block; }
+					}
 				}
 				&.clmn-1 {
 					.item { display: inline-block; width: 100%; max-width: none;
 						.thumb { float: left; width: 35%; max-width: 264px; margin-right: 2%; } 
 						.detail { float: left; width: 62%; text-align: justify; }
 					}
-					
 				}
 			}
 			a.bt-type1 { margin: 0 $bs*2 $bs*2; }

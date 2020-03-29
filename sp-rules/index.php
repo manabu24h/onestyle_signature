@@ -1,5 +1,8 @@
-<?php // 共通ヘッダー
-	
+<?php
+session_start();
+/* session_start()の書く位置は<?phpの直下 */
+
+// 共通ヘッダー
 $Path = $_SERVER['DOCUMENT_ROOT'];
 include( $Path . 'header.php');
 
@@ -21,7 +24,8 @@ include( $Path . 'header.php');
 				<h2>「非常時の特則」同意メールの送信が完了いたしました。</h2>
 				<p class="note">この度は、弊社の「非常時の特則」にご同意を賜り、誠にありがとうございました。</p>
 			</section>
-		<?php endif; ?>
+		
+		<?php else: ?>
 		
 		<section id="mail-form" name="mail-form" class="emergency ">
 			<h2>非常時の特則</h2>
@@ -62,8 +66,7 @@ include( $Path . 'header.php');
 			<div class="form-apply">
 				
 				<?php
-					//確認ページで「戻る」を押した時に、入力した内容をそのまま表示させる記述です。	
-					session_start();
+					//確認ページで「戻る」を押した時に、入力した内容をそのまま表示させる記述です。
 						date_default_timezone_set('Asia/Tokyo');
 						$g_name='';
 						$b_name='';
@@ -146,6 +149,7 @@ include( $Path . 'header.php');
 		</section>
 		<!-- // #mail-form END -->
 		
+		<?php endif; ?>
 	</div>
 	<!-- // #contents END -->
 

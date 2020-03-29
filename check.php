@@ -1,4 +1,8 @@
-<?php // 共通ヘッダー
+<?php
+session_start();
+/* session_start()の書く位置は<?phpの直下 */
+
+	// 共通ヘッダー
 	// $Path = $_SERVER['DOCUMENT_ROOT'] . '/onestyle/signature/';
     $Path = $_SERVER['DOCUMENT_ROOT'] ;
 	include( $Path . 'header.php');
@@ -15,7 +19,6 @@
 	<div id="contents">
 		<?php
 			//$_POST['name'] →$nameへ、$name= 値（江藤）といった具合で挿入されます
-			session_start();
 			foreach($_POST as $k=>$v){
 			  $_SESSION["data"][$k] = $v;
 			}

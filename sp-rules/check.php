@@ -1,7 +1,16 @@
-<?php // 共通ヘッダー
-	// $Path = $_SERVER['DOCUMENT_ROOT'] . '/onestyle/signature/';
-    $Path = $_SERVER['DOCUMENT_ROOT'] ;
-	include( $Path . 'header.php');
+<?php
+session_start();
+/* session_start()の書く位置は<?phpの直下 */
+
+foreach($_POST as $k=>$v){
+  $_SESSION["data"][$k] = $v;
+}
+
+// 共通ヘッダー
+// $Path = $_SERVER['DOCUMENT_ROOT'] . '/onestyle/signature/';
+$Path = $_SERVER['DOCUMENT_ROOT'] ;
+include( $Path . 'header.php');
+
 ?>
 
 <div id="container" class="">
@@ -13,13 +22,6 @@
 	<!-- // #breadcrumb END -->
 
 	<div id="contents">
-		<?php
-			//$_POST['name'] →$nameへ、$name= 値（江藤）といった具合で挿入されます
-			session_start();
-			foreach($_POST as $k=>$v){
-			  $_SESSION["data"][$k] = $v;
-			}
-		?>
 		
 		<!-- 入力した値が表示されます -->
 <!--
@@ -64,7 +66,7 @@
 						</p>
 						<div class="submit">
 							<a class="bt-submit" href="./index.php#apply">編集へ戻る</a>
-							<a class="bt-submit" href="./send-mail.php">この内容で送信</a>
+							<a class="bt-submit" href="./send.php">この内容で送信</a>
 						</div>
 					</div>
 				</div><!-- //.check-form END -->

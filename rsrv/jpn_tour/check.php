@@ -1,4 +1,7 @@
-<?php // 和装の見学予約フォーム
+<?php
+session_start();
+
+	// 和装の見学予約フォーム
 	// 共通ヘッダー
 	$Path = $_SERVER['DOCUMENT_ROOT'] ;
 	include( $Path . 'header.php');
@@ -8,7 +11,7 @@
 	  $$k=$v;
 	}
 	//値をセッションに入れる
-	session_start();
+	
 	$_SESSION['date']=$date;
 	$_SESSION['g_name']=$g_name;
 	$_SESSION['b_name']=$b_name;

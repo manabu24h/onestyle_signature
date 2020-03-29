@@ -1,8 +1,19 @@
-<?php // 共通ヘッダー
+<?php
+session_start();
+/* session_start()の書く位置は<?phpの直下 */
+	
+	// 共通ヘッダー
 	// $Path = $_SERVER['DOCUMENT_ROOT'] . '/onestyle/signature/';
     $Path = $_SERVER['DOCUMENT_ROOT'] ;
 	include( $Path . 'header.php');
 ?>
+
+		<?php $id = $_GET['id']; if($id): session_destory(); // セッションを終了する ?>
+			<section class="success">
+				<h2>「非常時の特則」同意メールの送信が完了いたしました。</h2>
+				<p class="note">この度は、弊社の「非常時の特則」にご同意を賜り、誠にありがとうございました。</p>
+			</section>
+		<?php endif; ?>
 
 <div id="container" class="">
 	<div id="breadcrumb">
@@ -43,7 +54,7 @@
 				<p>
 					郵送先<br />
 					<span class="addr">〒150-0001 渋谷区神宮前3-38-1 JP-4ビル1階<br />株式会社ONESTYLE　撮影予約係　行</span><br />
-					ご持参頂ける方は、ONESTYLE表参道店もしくは、横浜店のスタッフにお渡しください。
+					ご持参頂ける方は、ONESTYLE各店舗のスタッフにお渡しください。
 				</p>
 				<a href="./file/application_guide.pdf" target="_blank" class="bt-type1">撮影申込書をダウンロード<br /><span class="mini">PDF（978kb）</span></a>
 			</div>
@@ -178,8 +189,7 @@
 			<div class="form-apply">
 				
 				<?php
-					//確認ページで「戻る」を押した時に、入力した内容をそのまま表示させる記述です。	
-					session_start();
+					//確認ページで「戻る」を押した時に、入力した内容をそのまま表示させる記述です。
 						$g_name='';
 						$b_name='';
 						$tel ='';

@@ -1,4 +1,7 @@
-<?php // 洋装の試着予約フォーム
+<?php
+session_start();
+	
+// 洋装の試着予約フォーム
 	
 // 共通ヘッダー
 $Path = $_SERVER['DOCUMENT_ROOT'] ;
@@ -23,7 +26,6 @@ if (isset($_GET["id"]) && !empty($_GET["id"])) {
 }
 
 //確認ページで「戻る」を押した時に、入力した内容をそのまま表示させる記述です。	
-session_start();
 $date='';
 $g_name='';
 $b_name='';

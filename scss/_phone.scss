@@ -25,6 +25,9 @@ p { text-align: justify; }
 						.bt-type1 { position: absolute; left: 50%; bottom: 16px; transform: translateX( -50%); background: rgba($font_color,0.75); margin-bottom: 0; }
 					}
 					.detail { text-align: justify; }
+					.parallel { text-align:  center;
+						.bt-catalog { display: block; }
+					}
 				}
 				&.clmn-1 {
 					.item { display: inline-block; width: 100%; max-width: 336px; letter-spacing: .05em; padding: $bs*3; box-sizing: border-box; 

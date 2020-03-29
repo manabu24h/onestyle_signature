@@ -1,4 +1,7 @@
-<?php // 和装の衣装予約フォーム
+<?php
+session_start();
+
+// 和装の衣装予約フォーム
 $Path = $_SERVER['DOCUMENT_ROOT'] ;
 
 $date='';
@@ -10,8 +13,6 @@ $slc_date1='';
 $slc_date2='';
 $slc_time1='';
 $slc_time2='';
-
-session_start();
 
 $date = $_SESSION['date'];
 $g_name = $_SESSION['g_name'];

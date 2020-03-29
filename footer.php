@@ -3,7 +3,6 @@
 	$detect = new Mobile_Detect;
 ?> 
 
-
 <footer>
 	<div class="step-nav sp-on">
 		<a href="<?php echo $home; ?>">① 撮影申込書のご提出</a>

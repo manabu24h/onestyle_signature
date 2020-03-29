@@ -1,5 +1,8 @@
-<?php // 和装の衣装予約フォーム
-	
+<?php
+session_start();
+
+// 和装の衣装予約フォーム
+
 // 共通ヘッダー
 $Path = $_SERVER['DOCUMENT_ROOT'] ;
 include( $Path . 'header.php');
@@ -22,8 +25,7 @@ if (isset($_GET["id"]) && !empty($_GET["id"])) {
 */
 }
 
-//確認ページで「戻る」を押した時に、入力した内容をそのまま表示させる記述です。	
-session_start();
+//確認ページで「戻る」を押した時に、入力した内容をそのまま表示させる記述です。
 $date='';
 $g_name='';
 $b_name='';

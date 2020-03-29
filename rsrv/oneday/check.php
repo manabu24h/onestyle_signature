@@ -1,4 +1,7 @@
-<?php // 「1DAY完結プラン」サイズ・衣装予約フォーム
+<?php
+session_start();	
+	
+// 「1DAY完結プラン」サイズ・衣装予約フォーム
 	
 // 共通ヘッダー
 $Path = $_SERVER['DOCUMENT_ROOT'] ;
@@ -9,7 +12,6 @@ foreach($_POST as $k=>$v){
   $$k=$v;
 }
 //値をセッションに入れる
-session_start();
 
 $_SESSION['date']=$date;
 $_SESSION['g_name']=$g_name;
