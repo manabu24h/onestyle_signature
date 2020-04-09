@@ -56,7 +56,7 @@ session_start();
 					<span class="addr">〒150-0001 渋谷区神宮前3-38-1 JP-4ビル1階<br />株式会社ONESTYLE　撮影予約係　行</span><br />
 					ご持参頂ける方は、ONESTYLE各店舗のスタッフにお渡しください。
 				</p>
-				<a href="./file/application_guide.pdf" target="_blank" class="bt-type1">撮影申込書をダウンロード<br /><span class="mini">PDF（978kb）</span></a>
+				<a href="./file/application_guide.pdf" target="_blank" class="bt-type1">撮影申込書をダウンロード<br /><span class="mini">PDF（422kb）</span></a>
 			</div>
 			<!-- // ご来店もしくは郵送 END -->
 			
@@ -67,7 +67,7 @@ session_start();
 					大変お手数ですが、FAX送信後<br />
 					お電話にてご連絡をお願い致します。<br />
 					TEL番号 <span class="tel">03-6721-0592</span>&nbsp;&nbsp;ONESTYLE表参道店宛て				</p>
-				<a href="./file/application_guide.pdf" target="_blank" class="bt-type1">撮影申込書をダウンロード<br /><span class="mini">PDF（978kb）</span></a>
+				<a href="./file/application_guide.pdf" target="_blank" class="bt-type1">撮影申込書をダウンロード<br /><span class="mini">PDF（422kb）</span></a>
 			</div>
 			<!-- // FAXでの送信 END -->
 		</section>
